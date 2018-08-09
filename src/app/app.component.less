@@ -1,0 +1,96 @@
+@color_primary: #937bff;
+@color_accent: #f6ffd7;
+@color_dark_transparent_08: rgba(0,0,0,0.8);
+@color_dark_transparent_06: rgba(0,0,0,0.6);
+@color_dark_transparent_01: rgba(0,0,0,0.1);
+@color_dark_transparent_00: rgba(0,0,0,0.0);
+
+@font-face {
+  font-family: mcFontBold;
+  src: url('../assets/fonts/RobotoMono-Bold.ttf');
+}
+
+@font-face {
+  font-family: mcFontLight;
+  src: url('../assets/fonts/RobotoMono-Light.ttf');
+}
+
+.font {
+  font-family: mcFontLight;
+  font-weight: 100;
+}
+.fontBold {
+  font-family: mcFontBold;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,label,a {
+  .font;
+}
+
+.bt-absolute{
+  display: block;
+  position: absolute;
+};
+.bt-block {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+};
+body {
+  margin: 0;
+  padding: 0;
+  .bt-logo{
+    .bt-absolute;
+    margin: 15px;
+    p {
+      margin:0;
+      padding: 0;
+      width: 85px;
+    }
+    p:nth-child(1) {
+      color: @color_primary;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 5.8px;
+    };
+    p:nth-child(2) {
+      margin-top: -4px;
+      padding: 0 2px;
+      color: @color_accent;
+      letter-spacing: 21px;
+      font-size: 8px;
+      font-weight: 800;
+      border-bottom: 2px solid @color_primary;
+    };
+  };
+  .bt-menu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background: linear-gradient(@color_dark_transparent_06, @color_dark_transparent_00);
+    nav {
+      position: absolute;
+      width: 770px;
+      right: 0;
+      border-bottom: none;
+      a {
+        padding: 0;
+        min-width: 110px;
+        color: @color_accent;
+      };
+    }
+  };
+  .bt-start {
+    .bt-block;
+    min-height: 450px;
+    background: linear-gradient(@color_dark_transparent_08, @color_dark_transparent_01),url('../assets/images/banda.jpg') no-repeat;
+    background-size: cover;
+  };
+  .bt-about {
+    height: 900px;
+  };
+}

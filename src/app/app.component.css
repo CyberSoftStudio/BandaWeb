@@ -1,0 +1,100 @@
+@font-face {
+  font-family: mcFontBold;
+  src: url('../assets/fonts/RobotoMono-Bold.ttf');
+}
+@font-face {
+  font-family: mcFontLight;
+  src: url('../assets/fonts/RobotoMono-Light.ttf');
+}
+.font {
+  font-family: mcFontLight;
+  font-weight: 100;
+}
+.fontBold {
+  font-family: mcFontBold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+a {
+  font-family: mcFontLight;
+  font-weight: 100;
+}
+.bt-absolute {
+  display: block;
+  position: absolute;
+}
+.bt-block {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body .bt-logo {
+  display: block;
+  position: absolute;
+  margin: 15px;
+}
+body .bt-logo p {
+  margin: 0;
+  padding: 0;
+  width: 85px;
+}
+body .bt-logo p:nth-child(1) {
+  color: #937bff;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 5.8px;
+}
+body .bt-logo p:nth-child(2) {
+  margin-top: -4px;
+  padding: 0 2px;
+  color: #f6ffd7;
+  letter-spacing: 21px;
+  font-size: 8px;
+  font-weight: 800;
+  border-bottom: 2px solid #937bff;
+}
+body .bt-menu {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+}
+body .bt-menu nav {
+  position: absolute;
+  width: 770px;
+  right: 0;
+  border-bottom: none;
+}
+body .bt-menu nav a {
+  padding: 0;
+  min-width: 110px;
+  color: #f6ffd7;
+}
+body .bt-start {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 450px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('../assets/images/banda.jpg') no-repeat;
+  background-size: cover;
+}
+body .bt-about {
+  height: 900px;
+}

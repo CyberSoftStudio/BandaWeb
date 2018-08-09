@@ -1,0 +1,20 @@
+<div class="bt-block bt-menu">
+    <div class="bt-logo">
+        <p>{{config.name_1}}</p>
+        <p>{{config.name_2}}</p>
+    </div>
+    <nav mat-tab-nav-bar class="col-6">
+        <a mat-tab-link *ngFor="let link of menuLinks"
+           (click)="activeLink = link"
+           [active]="activeLink == link"> {{ts.translate('menu.' + link)}} </a>
+    </nav>
+
+    <!--<div>-->
+        <!--<button mat-button color="primary">Mat button</button>-->
+        <!--<button mat-button color="accent">Mat button</button>-->
+        <!--<button mat-button color="warn">Mat button</button>-->
+        <!--<button mat-raised-button color="primary">Mat button</button>-->
+        <!--<button mat-raised-button color="accent">Mat button</button>-->
+        <!--<button mat-raised-button color="warn">Mat button</button>-->
+    <!--</div>-->
+</div>
