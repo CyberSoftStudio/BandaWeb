@@ -3,12 +3,21 @@
         <p>{{config.name_1}}</p>
         <p>{{config.name_2}}</p>
     </div>
-    <nav mat-tab-nav-bar class="col-6">
+    <nav mat-tab-nav-bar class="bt-lg-screen">
         <a mat-tab-link *ngFor="let link of menuLinks"
            (click)="activeLink = link"
-           [active]="activeLink == link"> {{ts.translate('menu.' + link)}} </a>
+           [active]="activeLink === link"> {{ts.translate('menu.' + link)}}
+        </a>
     </nav>
-
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="bt-sm-screen">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let link of menuLinks">
+            <mat-icon>dialpad</mat-icon>
+            <span>{{ts.translate('menu.' + link)}}</span>
+        </button>
+    </mat-menu>
     <!--<div>-->
         <!--<button mat-button color="primary">Mat button</button>-->
         <!--<button mat-button color="accent">Mat button</button>-->

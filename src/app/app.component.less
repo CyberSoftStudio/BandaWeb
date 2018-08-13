@@ -53,16 +53,20 @@ body {
       color: @color_primary;
       font-size: 20px;
       font-weight: 800;
-      letter-spacing: 5.8px;
+      letter-spacing: 7.0px;
     };
     p:nth-child(2) {
       margin-top: -4px;
       padding: 0 2px;
-      color: @color_accent;
+      //color: @color_accent;
+      color: #000000;
       letter-spacing: 21px;
       font-size: 8px;
       font-weight: 800;
-      border-bottom: 2px solid @color_primary;
+      border-top: 1px solid @color_primary;
+      //border-bottom: 1px solid @color_primary;
+      background-color: @color_primary;
+      border-radius: 2px;
     };
   };
   .bt-menu {
@@ -82,15 +86,47 @@ body {
         min-width: 110px;
         color: @color_accent;
       };
-    }
+    };
+    button {
+      position: absolute;
+      right: 15px;
+      mat-icon {
+        color: @color_accent;
+        font-size: 40px;
+      };
+    };
   };
   .bt-start {
     .bt-block;
     min-height: 450px;
-    background: linear-gradient(@color_dark_transparent_08, @color_dark_transparent_01),url('../assets/images/banda.jpg') no-repeat;
-    background-size: cover;
+    overflow-x: hidden;
+    div {
+      .bt-absolute;
+      height: 100%;
+      width: 150%;
+      background: linear-gradient(@color_dark_transparent_08, @color_dark_transparent_01),url('../assets/images/banda.jpg') no-repeat;
+      background-size: cover;
+      // background-attachment: fixed;
+    };
   };
   .bt-about {
     height: 900px;
   };
+  .bt-sm-screen {
+    display: none;
+  };
+  .bt-lg-screen {
+    display: block;
+  };
+}
+
+@media screen and (max-width: 920px) {
+body {
+  .bt-sm-screen {
+    display: block;
+  };
+  .bt-lg-screen {
+    display: none;
+  };
+}
 }

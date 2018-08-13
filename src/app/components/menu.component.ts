@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TranslatorService} from '../services/translator.service';
 import {config} from '../config';
 

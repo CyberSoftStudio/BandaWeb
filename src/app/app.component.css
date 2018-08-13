@@ -55,16 +55,18 @@ body .bt-logo p:nth-child(1) {
   color: #937bff;
   font-size: 20px;
   font-weight: 800;
-  letter-spacing: 5.8px;
+  letter-spacing: 7.0px;
 }
 body .bt-logo p:nth-child(2) {
   margin-top: -4px;
   padding: 0 2px;
-  color: #f6ffd7;
+  color: #000000;
   letter-spacing: 21px;
   font-size: 8px;
   font-weight: 800;
-  border-bottom: 2px solid #937bff;
+  border-top: 1px solid #937bff;
+  background-color: #937bff;
+  border-radius: 2px;
 }
 body .bt-menu {
   display: block;
@@ -85,6 +87,14 @@ body .bt-menu nav a {
   min-width: 110px;
   color: #f6ffd7;
 }
+body .bt-menu button {
+  position: absolute;
+  right: 15px;
+}
+body .bt-menu button mat-icon {
+  color: #f6ffd7;
+  font-size: 40px;
+}
 body .bt-start {
   display: block;
   position: relative;
@@ -92,9 +102,30 @@ body .bt-start {
   margin: 0;
   padding: 0;
   min-height: 450px;
+  overflow-x: hidden;
+}
+body .bt-start div {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 150%;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('../assets/images/banda.jpg') no-repeat;
   background-size: cover;
 }
 body .bt-about {
   height: 900px;
+}
+body .bt-sm-screen {
+  display: none;
+}
+body .bt-lg-screen {
+  display: block;
+}
+@media screen and (max-width: 920px) {
+  body .bt-sm-screen {
+    display: block;
+  }
+  body .bt-lg-screen {
+    display: none;
+  }
 }
