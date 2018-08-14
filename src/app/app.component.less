@@ -4,6 +4,8 @@
 @color_dark_transparent_06: rgba(0,0,0,0.6);
 @color_dark_transparent_01: rgba(0,0,0,0.1);
 @color_dark_transparent_00: rgba(0,0,0,0.0);
+@cubeSide: 160px;
+@halfCubeSide: 80px;
 
 @font-face {
   font-family: mcFontBold;
@@ -99,8 +101,8 @@ body {
   .bt-start {
     .bt-block;
     min-height: 450px;
-    overflow-x: hidden;
-    div {
+    overflow: hidden;
+    .back {
       .bt-absolute;
       height: 100%;
       width: 150%;
@@ -118,6 +120,64 @@ body {
   .bt-lg-screen {
     display: block;
   };
+  app-chart {
+    .bt-absolute;
+    top: 100px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 400px;
+    .bt-chart {
+      .bt-absolute;
+      height: 100%;
+      width: 100%;
+      //border: 1px solid @color_primary;
+      transform-style: preserve-3d;
+      transform: rotateY(-60deg) rotateX(-10deg);
+      perspective: 300px;
+      .cube {
+        .bt-absolute;
+        bottom: 0;
+        width: 160px;
+        height: 160px;
+        transform-style: preserve-3d;
+        .side {
+          .font;
+          font-size: 20px;
+          color: @color_accent;
+          .bt-absolute;
+          top: 0;
+          //width: 160px;
+          //height: 160px;
+          .fadeI;
+          background: radial-gradient(rgba(246, 255, 215, 0) 25%,
+          rgba(246, 255, 215, 0.5));
+          border: 1px solid @color_accent;
+          border-radius: 3px;
+        };
+        .side:nth-child(1) {
+          transform: translateZ(80px);
+        };
+        .side:nth-child(2) {
+          transform: translateZ(-80px);
+        };
+        .side:nth-child(3) {
+          transform: translateX(-80px) rotateY(-90deg);
+        };
+        .side:nth-child(4) {
+          transform: translateX(80px) rotateY(90deg);
+        };
+        .side:nth-child(5) {
+          transform: translateY(-80px) rotateX(90deg);
+        };
+        .side:nth-child(6) {
+          transform: translateY(80px) rotateX(-90deg);
+        };
+        //.fadeI;
+      };
+    }
+  };
 }
 
 @media screen and (max-width: 920px) {
@@ -129,4 +189,26 @@ body {
     display: none;
   };
 }
+}
+
+
+.fadeI {
+  width: 0px;
+  height: 0px;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes fadeIn {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 160px;
+    height: 160px;
+  }
 }
