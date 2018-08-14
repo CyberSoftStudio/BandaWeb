@@ -1,10 +1,9 @@
 export const EN = {
     menu: {
         home: 'HOME',
-        about: 'ABOUT',
         features: 'FEATURES',
-        services: 'SERVICES',
-        portfolio: 'PORTFOLIO',
+        projects: 'PROJECTS',
+        job: 'JOB',
         team: 'TEAM',
         contact: 'CONTACT',
         // signin: 'SIGN IN',

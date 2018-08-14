@@ -6,8 +6,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
     MenuComponent,
     StartComponent,
-    AboutComponent,
-    ChartComponent
+    ProjectsComponent,
+    ChartComponent, FeaturesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent
 } from './components';
 import {
     MatAutocompleteModule,
@@ -55,8 +55,13 @@ import {EtherscanService} from './services/etherscan.service';
     AppComponent,
       MenuComponent,
       StartComponent,
-      AboutComponent,
-      ChartComponent
+      ProjectsComponent,
+      ChartComponent,
+      FeaturesComponent,
+      TeamComponent,
+      JobComponent,
+      ContactComponent,
+      FooterComponent
   ],
   imports: [
     BrowserModule,

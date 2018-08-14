@@ -1,10 +1,9 @@
 export const RU = {
     menu: {
         home: 'ГЛАВНАЯ',
-        about: 'О НАС',
+        projects: 'ПРОЕКТЫ',
         features: 'ОСОБЕННОСТИ',
-        services: 'СЕРВИСЫ',
-        portfolio: 'ПОРТФОЛИО',
+        job: 'РАБОТА',
         team: 'БАНДА',
         contact: 'КОНТАКТЫ',
         // signin: 'ВОЙТИ',

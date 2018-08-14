@@ -5,8 +5,7 @@
     </div>
     <nav mat-tab-nav-bar class="bt-lg-screen">
         <a mat-tab-link *ngFor="let link of menuLinks"
-           href="#{{link}}"
-           (click)="activeLink = link"
+           (click)="select($event, link)"
            [active]="activeLink === link"> {{ts.translate('menu.' + link)}}
         </a>
     </nav>
