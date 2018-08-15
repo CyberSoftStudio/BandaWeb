@@ -1,6 +1,6 @@
 import {RU} from '../dictionaries/ru';
 import {EN} from '../dictionaries/en';
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {config} from '../config';
 
 /**
@@ -10,9 +10,14 @@ import {config} from '../config';
 @Injectable()
 export class TranslatorService {
     public dictionary: {};
+    public currentLang: string;
     public langList: any;
+    public changeLang$ = new EventEmitter<{
+        lang: string
+    }>();
     constructor() {
         this.langList = config().app.lang_list;
+        this.currentLang = config().app.default_lang;
     }
     /**
      * @name set
@@ -34,6 +39,8 @@ export class TranslatorService {
         if (!setDictionary[lang]()) {
             this.dictionary = config().app.default_lang;
         }
+        this.currentLang = lang;
+        this.changeLang$.emit({lang: lang});
     }
     /**
      * @name translate
