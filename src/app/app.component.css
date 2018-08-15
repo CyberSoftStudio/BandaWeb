@@ -56,7 +56,7 @@ body .bt-logo p:nth-child(1) {
   color: #937bff;
   font-size: 20px;
   font-weight: 800;
-  letter-spacing: 7.0px;
+  letter-spacing: 7px;
 }
 body .bt-logo p:nth-child(2) {
   margin-top: -4px;
@@ -244,4 +244,23 @@ body #goToTop mat-icon {
     width: 160px;
     height: 160px;
   }
+}
+.bt-projects {
+  background-color: #937bff;
+}
+.bt-projects h1 {
+  text-align: center;
+  background-color: #f6ffd7;
+}
+.bt-projects .project-card {
+  background-color: #f6ffd7;
+  margin: 10px;
+  box-shadow: 10px 10px grey;
+  border-radius: 25px;
+}
+.bt-projects .project-card .header {
+  margin-left: 5%;
+}
+.bt-projects .project-card .content {
+  padding: 5px;
 }

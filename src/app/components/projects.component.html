@@ -1,4 +1,27 @@
-<div class="bt-block bt-projects">
+<!--<div class="bt-block bt-projects">
     <h1>{{ts.translate('menu.projects')}}</h1>
     <div *ngFor="let pro of source">{{pro.header}}</div>
+</div>-->
+
+<div class="bt-block bt-projects">
+        <h1>{{ts.translate('menu.projects')}}</h1>
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile *ngFor="let pro of source">
+                <div class="project-card">
+                    <div class="header">
+                        <h2>{{pro.header}}</h2>
+                        <h3>{{pro.timestamp}}</h3>
+                    </div>
+
+                    <!--<div>
+                        <img mat-card-image src={{pro.img}} alt="{{pro.header}} img" class="project-card-image">
+                    </div>-->
+                    <div class="content">
+                        <p>
+                            {{pro.text}}
+                        </p>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
 </div>
