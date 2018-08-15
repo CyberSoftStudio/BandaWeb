@@ -1,7 +1,9 @@
 @color_primary: #937bff;
-@color_accent: #f6ffd7;
+@color_primary_transparent: rgba(147, 123, 255, 0.2);
+@color_accent: rgb(246, 255, 215);
 @color_dark_transparent_08: rgba(0,0,0,0.8);
 @color_dark_transparent_06: rgba(0,0,0,0.6);
+@color_dark_transparent_04: rgba(0,0,0,0.4);
 @color_dark_transparent_01: rgba(0,0,0,0.1);
 @color_dark_transparent_00: rgba(0,0,0,0.0);
 @cubeSide: 160px;
@@ -28,7 +30,20 @@
 h1,h2,h3,h4,h5,h6,p,span,label,a {
   .font;
 }
-
+.bt-header{
+  color: @color_accent;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  span{
+    .bt-absolute;
+    bottom: 0;
+    left: 0;
+    background-color: @color_primary;
+    height: 1px;
+    width: 100%;
+  }
+};
 .bt-absolute{
   display: block;
   position: absolute;
@@ -79,7 +94,7 @@ body {
     height: 60px;
     min-height: 60px;
     z-index: 100;
-    background: linear-gradient(@color_dark_transparent_06, @color_dark_transparent_00);
+    background: linear-gradient(@color_dark_transparent_08 30%, @color_dark_transparent_00);
     nav {
       position: absolute;
       width: 670px;
@@ -139,6 +154,46 @@ body {
   };
   .bt-lg-screen {
     display: block;
+  };
+  #techniques {
+    .bt-techniques{
+      display: flex;
+      align-items: center;
+      //justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(@color_dark_transparent_04, @color_dark_transparent_01),url('../assets/images/banda.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      h1 {
+        .bt-header;
+        margin: 50px 0 20px 0;
+      };
+      .bt-card-block {
+        //padding: 20px;
+        //width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        .mat-card {
+          max-width: 350px;
+          background: linear-gradient(@color_dark_transparent_04 2%, @color_dark_transparent_06);
+          margin: 10px;
+          border: 1px solid @color_primary;
+          border-radius: 3px;
+          mat-card-title {
+            color: @color_primary;
+            font-size: 20px;
+          };
+          mat-card-content {
+            color: @color_accent;
+          };
+          img {
+            max-width: 150px;
+          };
+        };
+      };
+    };
   };
   app-chart {
     .bt-absolute;
@@ -219,6 +274,13 @@ body {
   };
   .bt-lg-screen {
     display: none;
+  };
+  #techniques {
+    .bt-techniques {
+      .bt-card-block {
+        flex-direction: column;
+      };
+    };
   };
 }
 }

@@ -26,6 +26,21 @@ a {
   font-family: mcFontLight;
   font-weight: 100;
 }
+.bt-header {
+  color: #f6ffd7;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.bt-header span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #937bff;
+  height: 1px;
+  width: 100%;
+}
 .bt-absolute {
   display: block;
   position: absolute;
@@ -76,7 +91,7 @@ body .bt-menu {
   height: 60px;
   min-height: 60px;
   z-index: 100;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0));
 }
 body .bt-menu nav {
   position: absolute;
@@ -139,6 +154,53 @@ body .bt-sm-screen {
 }
 body .bt-lg-screen {
   display: block;
+}
+body #techniques .bt-techniques {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('../assets/images/banda.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+body #techniques .bt-techniques h1 {
+  color: #f6ffd7;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: 50px 0 20px 0;
+}
+body #techniques .bt-techniques h1 span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #937bff;
+  height: 1px;
+  width: 100%;
+}
+body #techniques .bt-techniques .bt-card-block {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+body #techniques .bt-techniques .bt-card-block .mat-card {
+  max-width: 350px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4) 2%, rgba(0, 0, 0, 0.6));
+  margin: 10px;
+  border: 1px solid #937bff;
+  border-radius: 3px;
+}
+body #techniques .bt-techniques .bt-card-block .mat-card mat-card-title {
+  color: #937bff;
+  font-size: 20px;
+}
+body #techniques .bt-techniques .bt-card-block .mat-card mat-card-content {
+  color: #f6ffd7;
+}
+body #techniques .bt-techniques .bt-card-block .mat-card img {
+  max-width: 150px;
 }
 body app-chart {
   display: block;
@@ -223,6 +285,9 @@ body #goToTop mat-icon {
   }
   body .bt-lg-screen {
     display: none;
+  }
+  body #techniques .bt-techniques .bt-card-block {
+    flex-direction: column;
   }
 }
 .fadeI {

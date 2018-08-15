@@ -1,7 +1,7 @@
 export const EN = {
     menu: {
         home: 'HOME',
-        features: 'FEATURES',
+        techniques: 'TECHNIQUES',
         projects: 'PROJECTS',
         job: 'JOB',
         team: 'TEAM',

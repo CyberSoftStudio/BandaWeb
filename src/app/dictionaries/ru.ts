@@ -2,7 +2,7 @@ export const RU = {
     menu: {
         home: 'ГЛАВНАЯ',
         projects: 'ПРОЕКТЫ',
-        features: 'ОСОБЕННОСТИ',
+        techniques: 'МЕТОДЫ',
         job: 'РАБОТА',
         team: 'БАНДА',
         contact: 'КОНТАКТЫ',

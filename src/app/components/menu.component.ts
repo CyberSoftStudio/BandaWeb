@@ -14,7 +14,7 @@ export class MenuComponent {
         this.menuLinks = [];
         this.menuLinks.push('home');
         this.menuLinks.push('projects');
-        this.menuLinks.push('features');
+        this.menuLinks.push('techniques');
         this.menuLinks.push('team');
         this.menuLinks.push('job');
         this.menuLinks.push('contact');
@@ -26,7 +26,7 @@ export class MenuComponent {
         setTimeout(() => {
             const target = document.getElementById(ln);
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+        }, 30);
         this.activeLink = ln;
         // console.log(ln);
         // // console.dir(target);
