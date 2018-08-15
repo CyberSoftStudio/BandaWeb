@@ -247,21 +247,31 @@ body {
 
 
 .bt-projects {
-  background-color: @color_primary;
   h1 {
     text-align: center;
-    background-color: @color_accent;
   }
   .project-card {
     background-color: @color_accent;
     margin: 10px;
-    box-shadow: 10px 10px grey;
-    border-radius: 25px;
+    box-shadow: 5px 5px grey;
+    border-radius: 5px;
     .header {
+      margin-top:10px;
       margin-left: 5%;
+      h2 {
+        font-style: bold;
+      }
     }
     .content {
-      padding: 5px;
+      padding: 15px;
+      text-align: justify;
+      .project-card-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        height: 50%;
+      }
     }
   }
 }

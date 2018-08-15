@@ -245,22 +245,30 @@ body #goToTop mat-icon {
     height: 160px;
   }
 }
-.bt-projects {
-  background-color: #937bff;
-}
 .bt-projects h1 {
   text-align: center;
-  background-color: #f6ffd7;
 }
 .bt-projects .project-card {
   background-color: #f6ffd7;
   margin: 10px;
-  box-shadow: 10px 10px grey;
-  border-radius: 25px;
+  box-shadow: 5px 5px grey;
+  border-radius: 5px;
 }
 .bt-projects .project-card .header {
+  margin-top: 10px;
   margin-left: 5%;
 }
+.bt-projects .project-card .header h2 {
+  font-style: bold;
+}
 .bt-projects .project-card .content {
-  padding: 5px;
+  padding: 15px;
+  text-align: justify;
+}
+.bt-projects .project-card .content .project-card-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 50%;
 }
