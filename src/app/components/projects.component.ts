@@ -9,7 +9,7 @@ import {Projects} from '../dictionaries/projects';
 })
 export class ProjectsComponent {
     private changeLang: Subscription;
-    private source: string;
+    public source: string;
     constructor(public ts: TranslatorService) {
         this.changeLang = ts.changeLang$.subscribe(data => {
             this.setSource(data.lang);

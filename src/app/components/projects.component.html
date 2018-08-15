@@ -1,1 +1,4 @@
-<div class="bt-block bt-projects">Projects</div>
+<div class="bt-block bt-projects">
+    <h1>{{ts.translate('menu.projects')}}</h1>
+    <div *ngFor="let pro of source">{{pro.header}}</div>
+</div>
