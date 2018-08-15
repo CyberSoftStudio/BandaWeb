@@ -19,7 +19,13 @@ export const RU = {
         send: 'Отправить',
         more: 'Дальше'
     },
-    labels: {},
+    labels: {
+        go_to_top: 'Наверх',
+        RU: 'pусский',
+        EN: 'english',
+        DE: 'deutsche',
+        CN: '汉字'
+    },
     errors: {},
     info: {},
     app: {

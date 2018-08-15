@@ -1,4 +1,12 @@
 <div class="bt-start">
     <div [@moveImg]="move" class="back"></div>
     <app-chart></app-chart>
+    <div class="bt-list">
+        <mat-checkbox
+                *ngFor="let lang of langList"
+                (click)="setLang($event, lang)"
+                [checked]="activeLang === lang">
+            {{ts.translate('labels.' + lang)}}
+        </mat-checkbox>
+    </div>
 </div>

@@ -19,7 +19,13 @@ export const EN = {
         send: 'Send',
         more: 'More'
     },
-    labels: {},
+    labels: {
+        go_to_top: 'Up',
+        RU: 'pусский',
+        EN: 'english',
+        DE: 'deutsche',
+        CN: '汉字'
+    },
     errors: {},
     info: {},
     app: {

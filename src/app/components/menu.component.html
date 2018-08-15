@@ -13,17 +13,10 @@
         <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngFor="let link of menuLinks">
+        <button mat-menu-item *ngFor="let lnk of menuLinks"
+                (click)="select($event, lnk)">
             <mat-icon>dialpad</mat-icon>
-            <span>{{ts.translate('menu.' + link)}}</span>
+            <span>{{ts.translate('menu.' + lnk)}}</span>
         </button>
     </mat-menu>
-    <!--<div>-->
-        <!--<button mat-button color="primary">Mat button</button>-->
-        <!--<button mat-button color="accent">Mat button</button>-->
-        <!--<button mat-button color="warn">Mat button</button>-->
-        <!--<button mat-raised-button color="primary">Mat button</button>-->
-        <!--<button mat-raised-button color="accent">Mat button</button>-->
-        <!--<button mat-raised-button color="warn">Mat button</button>-->
-    <!--</div>-->
 </div>

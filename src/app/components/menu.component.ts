@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslatorService} from '../services/translator.service';
 import {config} from '../config';
 
@@ -10,9 +10,6 @@ export class MenuComponent {
     public menuLinks: any;
     public activeLink: string;
     public config: any;
-    public target$ = new EventEmitter<{
-        height: number
-    }>();
     constructor(public ts: TranslatorService) {
         this.menuLinks = [];
         this.menuLinks.push('home');
@@ -26,9 +23,13 @@ export class MenuComponent {
     }
     select (ev: Event, ln: string) {
         ev.preventDefault();
-        const target = document.getElementById(ln);
-        target.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+            const target = document.getElementById(ln);
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
         this.activeLink = ln;
-        console.log(ln);
+        // console.log(ln);
+        // // console.dir(target);
+        // // target.scrollIntoView();
     }
 }

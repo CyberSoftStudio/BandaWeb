@@ -9,8 +9,11 @@ import {config} from '../config';
  */
 @Injectable()
 export class TranslatorService {
-    public _dictionary: {};
-    constructor() {}
+    public dictionary: {};
+    public langList: any;
+    constructor() {
+        this.langList = config().app.lang_list;
+    }
     /**
      * @name set
      * @summary Sets translation language.
@@ -20,16 +23,16 @@ export class TranslatorService {
     public set(lang: string) {
         const setDictionary = {
             RU: () => {
-                this._dictionary = RU;
+                this.dictionary = RU;
                 return true;
             },
             EN: () => {
-                this._dictionary = EN;
+                this.dictionary = EN;
                 return true;
             }
         };
         if (!setDictionary[lang]()) {
-            this._dictionary = config().app.default_lang;
+            this.dictionary = config().app.default_lang;
         }
     }
     /**
@@ -42,6 +45,6 @@ export class TranslatorService {
         const k = {
             key1: key.split('.')[0],
             key2: key.split('.')[1]} || null;
-        return key && this._dictionary[k.key1][k.key2] ? this._dictionary[k.key1][k.key2] : '';
+        return key && this.dictionary[k.key1][k.key2] ? this.dictionary[k.key1][k.key2] : '';
     }
 }

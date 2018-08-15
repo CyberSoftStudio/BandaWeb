@@ -108,9 +108,27 @@ body {
       .bt-absolute;
       height: 100%;
       width: 150%;
+      margin-left: -50%;
       background: linear-gradient(@color_dark_transparent_08, @color_dark_transparent_01),url('../assets/images/banda.jpg') no-repeat;
       background-size: cover;
+      background-position: right;
       // background-attachment: fixed;
+    };
+    .bt-list {
+      .bt-absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 80px;
+      mat-checkbox {
+        color: @color_accent;
+        font-size: 12px;
+        //.mat-checkbox-inner-container {
+        //  opacity: 0.5;
+        //};
+        .mat-checkbox-background {
+          background-color: rgba(246, 255, 215, 0.5);
+        }
+      };
     };
   };
   .bt-projects {
@@ -180,6 +198,18 @@ body {
       };
     }
   };
+  #goToTop {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    color: @color_primary;
+    mat-icon {
+      font-size: 40px;
+    }
+  }
 }
 
 @media screen and (max-width: 860px) {

@@ -7,7 +7,7 @@ import {
     MenuComponent,
     StartComponent,
     ProjectsComponent,
-    ChartComponent, FeaturesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent
+    ChartComponent, FeaturesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent, GoToTopComponent
 } from './components';
 import {
     MatAutocompleteModule,
@@ -61,7 +61,8 @@ import {EtherscanService} from './services/etherscan.service';
       TeamComponent,
       JobComponent,
       ContactComponent,
-      FooterComponent
+      FooterComponent,
+      GoToTopComponent
   ],
   imports: [
     BrowserModule,

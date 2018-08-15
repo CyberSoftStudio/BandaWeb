@@ -1,35 +1,28 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslatorService} from '../services/translator.service';
-import {animate, state, style, transition, trigger, useAnimation} from '@angular/animations';
-import {anim} from '../utils/animations';
-import {EtherscanService} from '../services/etherscan.service';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
     selector: 'app-start',
     templateUrl: 'start.component.html',
     animations: [
         trigger('moveImg', [
-            state('false', style({marginLeft: 0})),
-            state('true', style({marginLeft: '-50%'})),
-            // transition('false => true', useAnimation(anim.moveLeft,
-            //     {params: {
-            //             time: 50000
-            //         }})),
+            state('false', style({marginLeft: '-50%'})),
+            state('true', style({marginLeft: 0})),
             transition('false => true', animate('50s')),
-            transition('true => false', animate('50s')),
-            // transition('true => false', useAnimation(anim.moveRight,
-            //     {params: {
-            //             time: 50000
-            //         }}))
+            transition('true => false', animate('50s'))
         ])
     ]
 })
 export class StartComponent implements OnInit {
     public move: boolean;
+    public langList: any;
+    public activeLang: string;
     constructor(
-        public ts: TranslatorService,
-        private es: EtherscanService) {
+        public ts: TranslatorService) {
         this.move = false;
+        this.langList = ts.langList;
+        this.activeLang = 'EN';
     }
     ngOnInit() {
         const self = this;
@@ -42,5 +35,10 @@ export class StartComponent implements OnInit {
         // this.es.scan()
         //     .then(() => console.log('Etherscan scan proccess start...'))
         //     .catch(error => console.log(error));
+    }
+    setLang(ev: Event, lang: string) {
+        ev.preventDefault();
+        this.activeLang = lang;
+        this.ts.set(this.activeLang);
     }
 }

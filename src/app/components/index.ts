@@ -7,3 +7,4 @@ export {TeamComponent} from './team.component';
 export {ContactComponent} from './contact.component';
 export {JobComponent} from './job.component';
 export {FooterComponent} from './footer.component';
+export {GoToTopComponent} from './goToTop.component';
