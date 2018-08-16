@@ -24,12 +24,4 @@ export class ProjectsComponent {
         this.source = Projects[lang];
     }
 
-    onResize(event) {
-        if(event.target.innerWidth < 860) {
-            this.colcount = 1;
-        }
-        else {
-            this.colcount = 2;
-        }
-    }
 }

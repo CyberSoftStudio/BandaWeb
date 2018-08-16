@@ -131,9 +131,6 @@ body .bt-start .bt-list mat-checkbox {
 body .bt-start .bt-list mat-checkbox .mat-checkbox-background {
   background-color: rgba(246, 255, 215, 0.5);
 }
-body .bt-projects {
-  height: 900px;
-}
 body .bt-sm-screen {
   display: none;
 }
@@ -248,14 +245,16 @@ body #goToTop mat-icon {
 .bt-projects h1 {
   text-align: center;
 }
+.bt-projects .project-list {
+  margin-right: 3%;
+}
 .bt-projects .project-card {
   background-color: #f6ffd7;
-  margin: 10px;
-  box-shadow: 5px 5px grey;
+  margin-right: 10px;
+  margin-left: 10px;
   border-radius: 5px;
 }
 .bt-projects .project-card .header {
-  margin-top: 10px;
   margin-left: 5%;
 }
 .bt-projects .project-card .header h2 {
@@ -271,4 +270,24 @@ body #goToTop mat-icon {
   margin-right: auto;
   width: 50%;
   height: 50%;
+}
+.bt-projects ul {
+  list-style: none;
+}
+@media screen and (min-width: 860px) {
+  .bt-projects ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}
+@media screen and (max-width: 860px) {
+  .bt-projects ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+}
+.bt-projects li {
+  margin-bottom: 30px;
 }

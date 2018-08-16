@@ -131,9 +131,9 @@ body {
       };
     };
   };
-  .bt-projects {
-    height: 900px;
-  };
+  //.bt-projects {
+  //  height: 900px;
+  //}
   .bt-sm-screen {
     display: none;
   };
@@ -250,13 +250,17 @@ body {
   h1 {
     text-align: center;
   }
+
+  .project-list {
+    margin-right: 3%;
+  }
+
   .project-card {
     background-color: @color_accent;
-    margin: 10px;
-    box-shadow: 5px 5px grey;
+    margin-right: 10px;
+    margin-left: 10px;
     border-radius: 5px;
     .header {
-      margin-top:10px;
       margin-left: 5%;
       h2 {
         font-style: bold;
@@ -274,4 +278,29 @@ body {
       }
     }
   }
+
+  ul {
+    list-style: none;
+  }
+
+  @media screen and (min-width: 860px) {
+    ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+  }
+
+  @media screen and (max-width: 860px) {
+    ul {
+      columns: 1;
+      -webkit-columns: 1;
+      -moz-columns: 1;
+    }
+  }
+
+  li {
+    margin-bottom: 30px;
+  }
+
 }
