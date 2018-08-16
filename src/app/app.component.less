@@ -255,10 +255,20 @@ body {
     margin-right: 3%;
   }
 
+  .project-card-image {
+    position: relative;
+    left: 65%;
+    top:110px;
+    width: 40%;
+    height: 30%;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
   .project-card {
     background-color: @color_accent;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
     border-radius: 5px;
     .header {
       margin-left: 5%;
@@ -269,18 +279,16 @@ body {
     .content {
       padding: 15px;
       text-align: justify;
-      .project-card-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        height: 50%;
-      }
     }
   }
 
   ul {
     list-style: none;
+  }
+
+  li {
+    margin-bottom: 30px;
+    min-height: 450px;
   }
 
   @media screen and (min-width: 860px) {
@@ -298,9 +306,4 @@ body {
       -moz-columns: 1;
     }
   }
-
-  li {
-    margin-bottom: 30px;
-  }
-
 }
