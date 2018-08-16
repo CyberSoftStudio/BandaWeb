@@ -13,7 +13,7 @@ export const Projects = {
             timestamp: '12451'
         },
         {
-            img: '../../assets/images/ExampleProjectImage.jpg',
+            img: '../../assets/images/project_alt.png',
             header: 'Third Project',
             text: 'asdlfkndf sadvkms sd.vkndslfv vdlf kn  bb bb b b b b b b  .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf',
             timestamp: '12451' 
