@@ -247,6 +247,7 @@ body {
 
 
 .bt-projects {
+
   h1 {
     text-align: center;
   }
@@ -363,6 +364,58 @@ body {
       margin-right: 0px;
       margin-left: 0px;
       padding-top: 15%;
+    }
+  }
+}
+
+.bt-contact {
+  align-content: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  .bt-contact-inner {
+    margin: auto;
+
+    .mat-form-field {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .input_alert {
+      background-color: lightcoral;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: -10px;
+    }
+
+    .btn-submit {
+      display:block;
+      width: 30%;
+      margin: auto;
+      background-color: Transparent;
+      border: 1px solid;
+      border-radius: 5px;
+      cursor:pointer;
+      overflow: hidden;
+      outline:none;
+      font-size : 24px;
+      padding: 5px;
+      margin-top: 20px;
+    }
+  }
+
+  
+  @media screen and (max-width:860px) {
+    .bt-contact-inner {
+      width: 90%;
+    }
+  }
+
+  @media screen and (min-width:860px) {
+    .bt-contact-inner {
+      width: 50%;
     }
   }
 }

@@ -1,9 +1,9 @@
 export const Projects = {
     EN: [
         {
-            img: '../../assets/images/ExampleProjectImage.jpg',
+            img: '../../assets/images/project_alt.png',
             header: 'First Project',
-            text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf',
+            text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf                     ',
             timestamp: '12341'
         },
         {
@@ -21,7 +21,7 @@ export const Projects = {
         {
             img: '../../assets/images/ExampleProjectImage.jpg',
             header: 'Project 4',
-            text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf',
+            text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf                    ',
             timestamp: '12451'
         }
     ],

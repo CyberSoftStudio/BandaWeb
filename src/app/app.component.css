@@ -352,3 +352,46 @@ body #goToTop mat-icon {
     padding-top: 15%;
   }
 }
+.bt-contact {
+  align-content: center;
+}
+.bt-contact h1 {
+  text-align: center;
+}
+.bt-contact .bt-contact-inner {
+  margin: auto;
+}
+.bt-contact .bt-contact-inner .mat-form-field {
+  width: 100%;
+  margin-top: 20px;
+}
+.bt-contact .bt-contact-inner .input_alert {
+  background-color: lightcoral;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: -10px;
+}
+.bt-contact .bt-contact-inner .btn-submit {
+  display: block;
+  width: 30%;
+  margin: auto;
+  background-color: Transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-size: 24px;
+  padding: 5px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 860px) {
+  .bt-contact .bt-contact-inner {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 860px) {
+  .bt-contact .bt-contact-inner {
+    width: 50%;
+  }
+}
