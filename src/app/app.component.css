@@ -447,8 +447,29 @@ body #goToTop mat-icon {
     margin-left: -100%;
   }
 }
+.bt-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .bt-projects h1 {
+  color: #f6ffd7;
+  display: block;
+  position: relative;
+  width: 200px;
   text-align: center;
+  margin: 50px 0 20px 0;
+  width: 180px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.bt-projects h1 span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #937bff;
+  height: 2px;
+  width: 100%;
 }
 .bt-projects .project-list {
   margin-right: 3%;
@@ -551,7 +572,6 @@ body #goToTop mat-icon {
   }
   .bt-projects .project-card {
     background-color: #f6ffd7;
-    padding-top: 5%;
     margin-right: 0;
     margin-left: 0;
     padding-top: 15%;
