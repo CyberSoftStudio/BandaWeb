@@ -2,17 +2,28 @@
     <h1>{{ts.translate('menu.techniques')}}
         <span></span>
     </h1>
+    <!--<carousel class="bt-card-block">-->
+        <!--<ng-container *ngFor="let method of source;">-->
+            <!--<ng-container *carouselItem>-->
+                <!--<div class="item">-->
+                    <!--<h2>{{method.header}}</h2>-->
+                    <!--<div>-->
+                        <!--<p>{{method.text}}</p>-->
+                        <!--<img src="{{method.img}}"/>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</ng-container>-->
+        <!--</ng-container>-->
+    <!--</carousel>-->
     <div class="bt-card-block">
-        <mat-card *ngFor="let method of source">
-            <mat-card-header>
-                <mat-card-title>
-                    {{method.header}}
-                </mat-card-title>
-            </mat-card-header>
-            <img src="{{method.img}}"/>
-            <mat-card-content>
-                <p>{{method.text}}</p>
-            </mat-card-content>
-        </mat-card>
+        <ng-container *ngFor="let method of source">
+            <div class="item">
+                <h2 class="header">{{method.header}}
+                    <span>{{method.subheader}}</span>
+                </h2>
+                <p class="content">{{method.text}}</p>
+                <img class="image" src="{{method.img}}"/>
+            </div>
+        </ng-container>
     </div>
 </div>

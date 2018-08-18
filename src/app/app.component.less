@@ -32,21 +32,27 @@ h1,h2,h3,h4,h5,h6,p,span,label,a {
 }
 .bt-header{
   color: @color_accent;
-  display: flex;
-  flex-direction: row;
+  display: block;
   position: relative;
+  width: 200px;
+  text-align: center;
+  margin: 50px 0 20px 0;
   span{
     .bt-absolute;
     bottom: 0;
     left: 0;
     background-color: @color_primary;
-    height: 1px;
+    height: 2px;
     width: 100%;
   }
 };
 .bt-absolute{
   display: block;
   position: absolute;
+};
+.bt-relative{
+  display: block;
+  position: relative;
 };
 .bt-block {
   display: block;
@@ -158,38 +164,110 @@ body {
   #techniques {
     .bt-techniques{
       display: flex;
-      align-items: center;
-      //justify-content: center;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
       background: linear-gradient(@color_dark_transparent_04, @color_dark_transparent_01),url('../assets/images/banda.jpg') no-repeat;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      padding-bottom: 40px;
       h1 {
         .bt-header;
-        margin: 50px 0 20px 0;
       };
       .bt-card-block {
-        //padding: 20px;
-        //width: 100%;
         display: flex;
-        flex-direction: row;
-        align-content: center;
-        .mat-card {
-          max-width: 350px;
-          background: linear-gradient(@color_dark_transparent_04 2%, @color_dark_transparent_06);
-          margin: 10px;
-          border: 1px solid @color_primary;
+        .item {
+          position: relative;
+          width: 350px;
+          //height: 400px;
+          background: @color_dark_transparent_06;
+          border: 2px solid @color_primary;
           border-radius: 3px;
-          mat-card-title {
-            color: @color_primary;
-            font-size: 20px;
-          };
-          mat-card-content {
+          margin: 10px;
+          h2 {
+            //.bt-absolute;
+            //top: 0;
+            //left: 0;
+            background: @color_primary;
             color: @color_accent;
+            font-weight: 800;
+            margin: 0;
+            padding: 10px 20px;
+            span {
+              display: block;
+              width: 100%;
+              font-size: 15px;
+              line-height: 1;
+            };
+          };
+          p {
+            color: @color_accent;
+            margin: 0;
+            padding: 10px;
+            //width: 100%;
           };
           img {
-            max-width: 150px;
+            display: block;
+            background: radial-gradient(@color_primary 5%, transparent);
+            width: 100%;
+            //height: 200px;
+          };
+        };
+      };
+    };
+  };
+  #team {
+    .bt-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background-image: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
+      h1 {
+        .bt-header;
+        width: 100px;
+        color: @color_dark_transparent_08;
+      };
+      .bt-card-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        //flex-direction: column;
+        .item {
+          display: flex;
+          flex-direction: column;
+          width: 300px;
+          margin: 10px;
+          box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+          border-radius: 3px;
+          overflow: hidden;
+          .header {
+            display: block;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+            font-weight: 800;
+            background: transparent;
+            //color: @color_primary;
+          };
+          div {
+            display: flex;
+            width: 100%;
+            height: 150px;
+            .image {
+              width: 100px;
+            }
+            .content {
+              margin: 0;
+              padding: 5px;
+              font-size: 14px;
+              width: 100%;
+              background: white;
+              text-align: center;
+            };
           };
         };
       };
@@ -267,6 +345,22 @@ body {
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+  body {
+    #techniques {
+      .bt-techniques {
+        .bt-card-block {
+          flex-direction: column;
+          .item {
+            width: 500px;
+          }
+        };
+      };
+    };
+  }
+}
+
 @media screen and (max-width: 860px) {
 body {
   .bt-sm-screen {
@@ -278,13 +372,28 @@ body {
   #techniques {
     .bt-techniques {
       .bt-card-block {
-        flex-direction: column;
+        .item {
+          width: 400px;
+        };
       };
     };
   };
 }
 }
 
+@media screen and (max-width: 540px) {
+  body {
+    #techniques {
+      .bt-techniques {
+        .bt-card-block {
+          .item {
+            width: 93%;
+          };
+        };
+      };
+    };
+  }
+}
 
 .fadeI {
   width: 0px;
@@ -304,5 +413,45 @@ body {
   100% {
     width: 160px;
     height: 160px;
+  }
+}
+.bt-slide-in {
+  animation-name: SlideInRight;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+};
+@keyframes SlideInRight {
+  0% {
+    display: none;
+    opacity: 0;
+    margin-right: -100%;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+.bt-slide-out {
+  animation-name: SlideOutLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+};
+@keyframes SlideOutLeft {
+  0% {
+    display: block;
+    opacity: 1;
+    margin-left: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    margin-left: -100%;
   }
 }

@@ -28,9 +28,11 @@ a {
 }
 .bt-header {
   color: #f6ffd7;
-  display: flex;
-  flex-direction: row;
+  display: block;
   position: relative;
+  width: 200px;
+  text-align: center;
+  margin: 50px 0 20px 0;
 }
 .bt-header span {
   display: block;
@@ -38,12 +40,16 @@ a {
   bottom: 0;
   left: 0;
   background-color: #937bff;
-  height: 1px;
+  height: 2px;
   width: 100%;
 }
 .bt-absolute {
   display: block;
   position: absolute;
+}
+.bt-relative {
+  display: block;
+  position: relative;
 }
 .bt-block {
   display: block;
@@ -157,18 +163,22 @@ body .bt-lg-screen {
 }
 body #techniques .bt-techniques {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('../assets/images/banda.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  padding-bottom: 40px;
 }
 body #techniques .bt-techniques h1 {
   color: #f6ffd7;
-  display: flex;
-  flex-direction: row;
+  display: block;
   position: relative;
+  width: 200px;
+  text-align: center;
   margin: 50px 0 20px 0;
 }
 body #techniques .bt-techniques h1 span {
@@ -177,30 +187,107 @@ body #techniques .bt-techniques h1 span {
   bottom: 0;
   left: 0;
   background-color: #937bff;
-  height: 1px;
+  height: 2px;
   width: 100%;
 }
 body #techniques .bt-techniques .bt-card-block {
   display: flex;
-  flex-direction: row;
-  align-content: center;
 }
-body #techniques .bt-techniques .bt-card-block .mat-card {
-  max-width: 350px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4) 2%, rgba(0, 0, 0, 0.6));
-  margin: 10px;
-  border: 1px solid #937bff;
+body #techniques .bt-techniques .bt-card-block .item {
+  position: relative;
+  width: 350px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #937bff;
   border-radius: 3px;
+  margin: 10px;
 }
-body #techniques .bt-techniques .bt-card-block .mat-card mat-card-title {
-  color: #937bff;
-  font-size: 20px;
-}
-body #techniques .bt-techniques .bt-card-block .mat-card mat-card-content {
+body #techniques .bt-techniques .bt-card-block .item h2 {
+  background: #937bff;
   color: #f6ffd7;
+  font-weight: 800;
+  margin: 0;
+  padding: 10px 20px;
 }
-body #techniques .bt-techniques .bt-card-block .mat-card img {
-  max-width: 150px;
+body #techniques .bt-techniques .bt-card-block .item h2 span {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  line-height: 1;
+}
+body #techniques .bt-techniques .bt-card-block .item p {
+  color: #f6ffd7;
+  margin: 0;
+  padding: 10px;
+}
+body #techniques .bt-techniques .bt-card-block .item img {
+  display: block;
+  background: radial-gradient(#937bff 5%, transparent);
+  width: 100%;
+}
+body #team .bt-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
+}
+body #team .bt-team h1 {
+  color: #f6ffd7;
+  display: block;
+  position: relative;
+  width: 200px;
+  text-align: center;
+  margin: 50px 0 20px 0;
+  width: 100px;
+  color: rgba(0, 0, 0, 0.8);
+}
+body #team .bt-team h1 span {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #937bff;
+  height: 2px;
+  width: 100%;
+}
+body #team .bt-team .bt-card-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #team .bt-team .bt-card-block .item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+body #team .bt-team .bt-card-block .item .header {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-weight: 800;
+  background: transparent;
+}
+body #team .bt-team .bt-card-block .item div {
+  display: flex;
+  width: 100%;
+  height: 150px;
+}
+body #team .bt-team .bt-card-block .item div .image {
+  width: 100px;
+}
+body #team .bt-team .bt-card-block .item div .content {
+  margin: 0;
+  padding: 5px;
+  font-size: 14px;
+  width: 100%;
+  background: white;
+  text-align: center;
 }
 body app-chart {
   display: block;
@@ -279,6 +366,14 @@ body #goToTop {
 body #goToTop mat-icon {
   font-size: 40px;
 }
+@media screen and (max-width: 1024px) {
+  body #techniques .bt-techniques .bt-card-block {
+    flex-direction: column;
+  }
+  body #techniques .bt-techniques .bt-card-block .item {
+    width: 500px;
+  }
+}
 @media screen and (max-width: 860px) {
   body .bt-sm-screen {
     display: block;
@@ -286,8 +381,13 @@ body #goToTop mat-icon {
   body .bt-lg-screen {
     display: none;
   }
-  body #techniques .bt-techniques .bt-card-block {
-    flex-direction: column;
+  body #techniques .bt-techniques .bt-card-block .item {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 540px) {
+  body #techniques .bt-techniques .bt-card-block .item {
+    width: 93%;
   }
 }
 .fadeI {
@@ -308,5 +408,45 @@ body #goToTop mat-icon {
   100% {
     width: 160px;
     height: 160px;
+  }
+}
+.bt-slide-in {
+  animation-name: SlideInRight;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes SlideInRight {
+  0% {
+    display: none;
+    opacity: 0;
+    margin-right: -100%;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+.bt-slide-out {
+  animation-name: SlideOutLeft;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+@keyframes SlideOutLeft {
+  0% {
+    display: block;
+    opacity: 1;
+    margin-left: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+    margin-left: -100%;
   }
 }

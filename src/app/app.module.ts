@@ -7,7 +7,7 @@ import {
     MenuComponent,
     StartComponent,
     ProjectsComponent,
-    ChartComponent, TechniquesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent, GoToTopComponent
+    ChartComponent, TechniquesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent, GoToTopComponent, CarouselComponent, CarouselItemDirective, CarouselItemElement
 } from './components';
 import {
     MatAutocompleteModule,
@@ -62,7 +62,10 @@ import {EtherscanService} from './services/etherscan.service';
       JobComponent,
       ContactComponent,
       FooterComponent,
-      GoToTopComponent
+      GoToTopComponent,
+      CarouselComponent,
+      CarouselItemElement,
+      CarouselItemDirective
   ],
   imports: [
     BrowserModule,
