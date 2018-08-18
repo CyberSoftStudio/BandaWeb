@@ -1,1 +1,80 @@
-<div class="bt-block bt-contact">Contact</div>
+<div class="bt-block bt-contact">
+    <h1>Contact us</h1>
+    <div class="bt-contact-inner">
+
+    <form (ngSubmit)="submitMessage(); messageForm.reset()" #messageForm="ngForm">
+
+        <div>
+        <mat-form-field>
+            <input matInput placeholder="Your name"
+                type="text"
+                id="name"
+                required maxlength="50"
+                [(ngModel)]="message.name"
+                name="name"
+                #name="ngModel">
+        </mat-form-field>
+        </div>
+        <div [hidden]="name.valid || name.pristine">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="input_alert">
+                Please enter Your name
+            </div>
+        </div>
+       
+        <div>
+        <mat-form-field>
+            <input matInput placeholder="E-mail"
+                type="email"
+                id="email"
+                required
+                email
+                [(ngModel)]="message.email"
+                name="email"
+                #email="ngModel">
+        </mat-form-field>
+        </div>
+        <div [hidden]="email.valid || email.pristine">
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="input_alert">
+                Please enter a valid e-mail address
+            </div>
+        </div>
+
+        <div>
+        <mat-form-field>
+            <input matInput placeholder="Phone number (optional)"
+                type="tel"
+                id="phoneNumber"
+                maxlength="14"
+                [(ngModel)]="message.phoneNumber"
+                name="phoneNumber"
+                #phoneNumber="ngModel">
+        </mat-form-field>
+        </div>
+
+        <div>
+        <mat-form-field>
+            <textarea matInput placeholder="Your message"
+                rows="12"
+                id="messageText"
+                required maxlength="10000"
+                [(ngModel)]="message.text"
+                name="messageText"
+                #messageText="ngModel"></textarea>
+        </mat-form-field>
+        </div>
+        <div [hidden]="messageText.valid || messageText.pristine">
+            <div *ngIf="messageText.invalid && (messageText.dirty || messageText.touched)">
+                <div *ngIf="messageText.errors.required" class="input_alert">
+                    Message should not be empty
+                </div>
+                <div *ngIf="messageText.errors.maxlength" class="input_alert">
+                    Sorry, message should not be longer than 10000 symbols
+                </div>
+            </div>
+        </div>
+       
+        <button type="submit" class="btn-submit" [disabled]="!messageForm.form.valid">Submit</button>
+       
+    </form>
+    </div>
+</div>

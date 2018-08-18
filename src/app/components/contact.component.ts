@@ -6,4 +6,16 @@ import {Component} from '@angular/core';
 })
 export class ContactComponent {
     constructor() {}
+
+    public message:any = {
+        name: "",
+        email: "",
+        phoneNumber: "",
+        text: ""
+    };
+
+    submitMessage(): void {
+        //some actions
+    }
+
 }

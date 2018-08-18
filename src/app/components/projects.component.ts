@@ -8,15 +8,20 @@ import {Projects} from '../dictionaries/projects';
     templateUrl: 'projects.component.html'
 })
 export class ProjectsComponent {
+
     private changeLang: Subscription;
-    private source: string;
+    public colcount: number = 2;
+    public source: string;
+
     constructor(public ts: TranslatorService) {
         this.changeLang = ts.changeLang$.subscribe(data => {
             this.setSource(data.lang);
         });
         this.source = Projects[ts.currentLang];
     }
+
     public setSource (lang: string) {
         this.source = Projects[lang];
     }
+
 }

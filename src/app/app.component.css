@@ -152,9 +152,6 @@ body .bt-start .bt-list mat-checkbox {
 body .bt-start .bt-list mat-checkbox .mat-checkbox-background {
   background-color: rgba(246, 255, 215, 0.5);
 }
-body .bt-projects {
-  height: 900px;
-}
 body .bt-sm-screen {
   display: none;
 }
@@ -448,5 +445,158 @@ body #goToTop mat-icon {
     display: none;
     opacity: 0;
     margin-left: -100%;
+  }
+}
+.bt-projects h1 {
+  text-align: center;
+}
+.bt-projects .project-list {
+  margin-right: 3%;
+  margin-left: 3%;
+}
+.bt-projects .project-card {
+  background-color: #f6ffd7;
+  border-radius: 5px;
+}
+.bt-projects .project-card .header {
+  margin-left: 5%;
+}
+.bt-projects .project-card .header h2 {
+  font-weight: 800;
+}
+.bt-projects .project-card .content {
+  padding: 15px;
+  text-align: justify;
+}
+.bt-projects ul {
+  list-style: none;
+  padding-left: 0;
+}
+.bt-projects li {
+  margin-bottom: 30px;
+}
+.bt-projects .project-card-image {
+  position: relative;
+  border-radius: 5px;
+  z-index: 1;
+  box-shadow: -10px 10px 10px grey;
+}
+@media screen and (min-width: 860px) {
+  .bt-projects ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+  .bt-projects li {
+    min-height: 550px;
+  }
+  .bt-projects .project-card-image {
+    left: 30%;
+    top: 30px;
+    -webkit-transform: translate(0%, 45%);
+    -moz-transform: translate(0%, 45%);
+    -ms-transform: translate(0%, 45%);
+    -o-transform: translate(0%, 45%);
+    transform: translate(0%, 45%);
+    width: 70%;
+    height: 30%;
+  }
+  .bt-projects .project-card {
+    background-color: #f6ffd7;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 25%;
+  }
+}
+@media screen and (max-width: 860px) and (min-width: 450px) {
+  .bt-projects ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+  .bt-projects .project-card-image {
+    left: 50%;
+    top: 30px;
+    -webkit-transform: translate(0%, 45%);
+    -moz-transform: translate(0%, 45%);
+    -ms-transform: translate(0%, 45%);
+    -o-transform: translate(0%, 45%);
+    transform: translate(0%, 45%);
+    width: 55%;
+    height: 30%;
+  }
+  .bt-projects .project-card {
+    background-color: #f6ffd7;
+    padding-top: 5%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .bt-projects ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+  .bt-projects .project-card-image {
+    left: 30%;
+    top: 30px;
+    -webkit-transform: translate(0%, 35%);
+    -moz-transform: translate(0%, 35%);
+    -ms-transform: translate(0%, 35%);
+    -o-transform: translate(0%, 35%);
+    transform: translate(0%, 35%);
+    width: 75%;
+    height: 30%;
+  }
+  .bt-projects .project-card {
+    background-color: #f6ffd7;
+    padding-top: 5%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 15%;
+  }
+}
+.bt-contact {
+  align-content: center;
+}
+.bt-contact h1 {
+  text-align: center;
+}
+.bt-contact .bt-contact-inner {
+  margin: auto;
+}
+.bt-contact .bt-contact-inner .mat-form-field {
+  width: 100%;
+  margin-top: 20px;
+}
+.bt-contact .bt-contact-inner .input_alert {
+  background-color: lightcoral;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: -10px;
+}
+.bt-contact .bt-contact-inner .btn-submit {
+  display: block;
+  width: 30%;
+  margin: auto;
+  background-color: Transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-size: 24px;
+  padding: 5px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 860px) {
+  .bt-contact .bt-contact-inner {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 860px) {
+  .bt-contact .bt-contact-inner {
+    width: 50%;
   }
 }

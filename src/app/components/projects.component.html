@@ -1,1 +1,22 @@
-<div class="bt-block bt-projects">Projects</div>
+
+<div class="bt-block bt-projects">
+    <h1>{{ts.translate('menu.projects')}}</h1>
+
+    <ul class="project-list">
+        <li *ngFor="let pro of source">
+            <img mat-card-image src={{pro.img}} alt="{{pro.header}} img" class="project-card-image">
+            <mat-card class="project-card">
+                <mat-card-header class="header">
+                    <mat-card-title><h2>{{pro.header}}</h2></mat-card-title>
+                    <mat-card-subtitle><h4>{{pro.timestamp}}</h4></mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content class="content">
+                    <p>
+                        {{pro.text}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </li>
+    </ul>
+</div>
