@@ -46,8 +46,10 @@ export class CarouselComponent implements AfterViewInit {
     @ContentChildren(CarouselItemDirective) items: QueryList<CarouselItemDirective>;
     @ViewChildren(CarouselItemElement, { read: ElementRef }) private itemsElements: QueryList<ElementRef>;
     @ViewChild('carousel') private carousel: ElementRef;
-    @Input() timing = '1000ms cubic-bezier(0.2, 1, 0.2, 1)';
+    @Input() timing = '7000ms cubic-bezier(0.2, 1, 0.2, 1)';
     @Input() showControls = true;
+    @Input() slide = false;
+    @Input() slideTime = 2;
     private player: AnimationPlayer;
     private itemWidth: number;
     private currentSlide = 0;
@@ -94,7 +96,19 @@ export class CarouselComponent implements AfterViewInit {
                 width: `${this.itemWidth}px`
             };
         });
-
+        if (this.slide) {
+            setInterval(() => {
+                if ( this.currentSlide + 1 === this.items.length ) {
+                    this.currentSlide = 0;
+                    const offset = 0;
+                    const myAnimation: AnimationFactory = this.buildAnimation(offset);
+                    this.player = myAnimation.create(this.carousel.nativeElement);
+                    this.player.play();
+                } else {
+                   this.next();
+                }
+            }, this.slideTime * 1000);
+        }
     }
 
 }

@@ -17,12 +17,6 @@ export const Projects = {
             header: 'Third Project',
             text: 'asdlfkndf sadvkms sd.vkndslfv vdlf kn  bb bb b b b b b b  .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf',
             timestamp: '12451'
-        },
-        {
-            img: '../../assets/images/ExampleProjectImage.jpg',
-            header: 'Project 4',
-            text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf                    ',
-            timestamp: '12451'
         }
     ],
     RU: [
@@ -41,12 +35,6 @@ export const Projects = {
         {
             img: '../../assets/images/ExampleProjectImage.jpg',
             header: 'Третий проект',
-            text: 'А дль ПьльмМю что-то на русском аывадлыжва  мдвам ямдфыьвмю вям ывм ьвыа мюв бвя юя.ьв ам.бы вам явм .ыбяв амюф ывмжы юбячьсжыьвсы ыжвьсфв мыь дяв мфыбв мжы. s.ldf',
-            timestamp: '12451'
-        },
-        {
-            img: '../../assets/images/ExampleProjectImage.jpg',
-            header: 'Проект 4',
             text: 'А дль ПьльмМю что-то на русском аывадлыжва  мдвам ямдфыьвмю вям ывм ьвыа мюв бвя юя.ьв ам.бы вам явм .ыбяв амюф ывмжы юбячьсжыьвсы ыжвьсфв мыь дяв мфыбв мжы. s.ldf',
             timestamp: '12451'
         }

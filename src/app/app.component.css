@@ -101,7 +101,7 @@ body .bt-menu {
 }
 body .bt-menu nav {
   position: absolute;
-  width: 670px;
+  width: 600px;
   right: 0;
   border-bottom: none;
 }
@@ -152,6 +152,28 @@ body .bt-start .bt-list mat-checkbox {
 body .bt-start .bt-list mat-checkbox .mat-checkbox-background {
   background-color: rgba(246, 255, 215, 0.5);
 }
+body .bt-start .slides {
+  display: block;
+  position: absolute;
+  top: 100px;
+  right: 10%;
+  border-left: 2px solid #f6ffd7;
+}
+body .bt-start .slides .item {
+  width: 350px;
+  height: 150px;
+}
+body .bt-start .slides .item h3 {
+  color: #937bff;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 10px 5px;
+}
+body .bt-start .slides .item p {
+  color: #f6ffd7;
+  margin: 0;
+  padding: 0 10px;
+}
 body .bt-sm-screen {
   display: none;
 }
@@ -192,7 +214,7 @@ body #techniques .bt-techniques .bt-card-block {
 }
 body #techniques .bt-techniques .bt-card-block .item {
   position: relative;
-  width: 350px;
+  width: 450px;
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid #937bff;
   border-radius: 3px;
@@ -364,11 +386,8 @@ body #goToTop mat-icon {
   font-size: 40px;
 }
 @media screen and (max-width: 1024px) {
-  body #techniques .bt-techniques .bt-card-block {
-    flex-direction: column;
-  }
   body #techniques .bt-techniques .bt-card-block .item {
-    width: 500px;
+    width: 400px;
   }
 }
 @media screen and (max-width: 860px) {
@@ -378,8 +397,26 @@ body #goToTop mat-icon {
   body .bt-lg-screen {
     display: none;
   }
+  body #techniques .bt-techniques .bt-card-block {
+    flex-direction: column;
+  }
   body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
+  }
+}
+@media screen and (max-width: 640px) {
+  body .bt-start .slides {
+    top: 60px;
+    left: 15%;
+  }
+  body .bt-start .slides .item {
+    width: 300px;
+  }
+  body .bt-start .slides .item h3 {
+    font-size: 25px;
+  }
+  body #team .bt-team .bt-card-block {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 540px) {
@@ -451,6 +488,8 @@ body #goToTop mat-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 30px 0 100px 0;
 }
 .bt-projects h1 {
   color: #f6ffd7;
@@ -459,7 +498,7 @@ body #goToTop mat-icon {
   width: 200px;
   text-align: center;
   margin: 50px 0 20px 0;
-  width: 180px;
+  width: 350px;
   color: rgba(0, 0, 0, 0.8);
 }
 .bt-projects h1 span {
@@ -476,7 +515,6 @@ body #goToTop mat-icon {
   margin-left: 3%;
 }
 .bt-projects .project-card {
-  background-color: #f6ffd7;
   border-radius: 5px;
 }
 .bt-projects .project-card .header {
@@ -492,6 +530,7 @@ body #goToTop mat-icon {
 .bt-projects ul {
   list-style: none;
   padding-left: 0;
+  padding-bottom: 200px;
 }
 .bt-projects li {
   margin-bottom: 30px;
@@ -523,7 +562,6 @@ body #goToTop mat-icon {
     height: 30%;
   }
   .bt-projects .project-card {
-    background-color: #f6ffd7;
     margin-right: 40px;
     margin-left: 40px;
     padding-top: 25%;
@@ -534,6 +572,7 @@ body #goToTop mat-icon {
     columns: 1;
     -webkit-columns: 1;
     -moz-columns: 1;
+    padding-bottom: 60px;
   }
   .bt-projects .project-card-image {
     left: 50%;
@@ -547,10 +586,10 @@ body #goToTop mat-icon {
     height: 30%;
   }
   .bt-projects .project-card {
-    background-color: #f6ffd7;
     padding-top: 5%;
     margin-right: 10px;
     margin-left: 10px;
+    width: 80%;
   }
 }
 @media screen and (max-width: 450px) {
@@ -571,7 +610,6 @@ body #goToTop mat-icon {
     height: 30%;
   }
   .bt-projects .project-card {
-    background-color: #f6ffd7;
     margin-right: 0;
     margin-left: 0;
     padding-top: 15%;

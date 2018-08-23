@@ -9,4 +9,18 @@
             {{ts.translate('labels.' + lang)}}
         </mat-checkbox>
     </div>
+    <carousel #carousel="carousel"
+              [showControls]="false"
+              class="slides"
+              [slide]="true"
+              [slideTime]="10">
+        <ng-container *ngFor="let item of source;">
+            <ng-container *carouselItem>
+                <div class="item">
+                    <h3>{{item.header}}</h3>
+                    <p>{{item.text}}</p>
+                </div>
+            </ng-container>
+        </ng-container>
+    </carousel>
 </div>

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {TranslatorService} from '../services/translator.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {StartSlides} from '../dictionaries/startslides';
+import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-start',
@@ -18,11 +20,17 @@ export class StartComponent implements OnInit {
     public move: boolean;
     public langList: any;
     public activeLang: string;
+    public source: any;
+    private changeLang = Subscription;
     constructor(
         public ts: TranslatorService) {
         this.move = false;
         this.langList = ts.langList;
         this.activeLang = 'EN';
+        this.source = StartSlides[ts.currentLang];
+        this.changeLang = ts.changeLang$.subscribe(data => {
+            this.setSource(data['lang']);
+        });
     }
     ngOnInit() {
         const self = this;
@@ -40,5 +48,8 @@ export class StartComponent implements OnInit {
         ev.preventDefault();
         this.activeLang = lang;
         this.ts.set(this.activeLang);
+    }
+    setSource(lang: string) {
+        this.source = StartSlides[lang];
     }
 }

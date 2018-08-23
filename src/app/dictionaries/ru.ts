@@ -1,7 +1,7 @@
 export const RU = {
     menu: {
         home: 'ГЛАВНАЯ',
-        projects: 'ПРОЕКТЫ',
+        projects: 'ПРИОРИТЕТЫ',
         techniques: 'МЕТОДЫ',
         job: 'РАБОТА',
         team: 'БАНДА',
@@ -24,7 +24,8 @@ export const RU = {
         RU: 'pусский',
         EN: 'english',
         DE: 'deutsche',
-        CN: '汉字'
+        CN: '汉字',
+        major_priorities: 'Основные приоритеты'
     },
     errors: {},
     info: {},
