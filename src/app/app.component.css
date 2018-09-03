@@ -539,7 +539,7 @@ body #goToTop mat-icon {
   position: relative;
   border-radius: 5px;
   z-index: 1;
-  box-shadow: -10px 10px 10px grey;
+  box-shadow: -10px 10px 10px #808080;
 }
 @media screen and (min-width: 860px) {
   .bt-projects ul {
@@ -657,4 +657,20 @@ body #goToTop mat-icon {
   .bt-contact .bt-contact-inner {
     width: 50%;
   }
+}
+#app-graph #app-graph-inner {
+  overflow: hidden;
+}
+#app-graph #app-graph-inner ul {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+}
+#app-graph #app-graph-inner ul .listcontent {
+  height: 300px;
+  width: calc(33.33333333vw);
+}
+#app-graph #app-graph-inner ul .listcontent img {
+  width: 100%;
+  height: 100%;
 }

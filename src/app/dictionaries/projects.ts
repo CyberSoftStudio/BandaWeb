@@ -1,19 +1,19 @@
 export const Projects = {
     EN: [
         {
-            img: '../../assets/images/project_alt.png',
+            img: '../../assets/images/ExampleProjectImage.png',
             header: 'First Project',
             text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf                     ',
             timestamp: '12341'
         },
         {
-            img: '../../assets/images/ExampleProjectImage.jpg',
+            img: '../../assets/images/ExampleProjectImage.png',
             header: 'Second Project',
             text: 'asdlfkndf sadvkms sd.vkndslfv vdlfknv .aaa aaa a a a aa a a knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf',
             timestamp: '12451'
         },
         {
-            img: '../../assets/images/project_alt.png',
+            img: '../../assets/images/ExampleProjectImage.png',
             header: 'Third Project',
             text: 'asdlfkndf sadvkms sd.vkndslfv vdlf kn  bb bb b b b b b b  .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldfvnlsd asdlfkndf sadvkms sd.vkndslfv vdlfknv .knjdfvs dfvj. s.ldf',
             timestamp: '12451'
@@ -21,19 +21,19 @@ export const Projects = {
     ],
     RU: [
         {
-            img: '../../assets/images/ExampleProjectImage.jpg',
+            img: '../../assets/images/ExampleProjectImage.png',
             header: 'Первый проект',
             text: 'А дль ПьльмМю что-то на русском аывадлыжва  мдвам ямдфыьвмю вям ывм ьвыа мюв бвя юя.ьв ам.бы вам явм .ыбяв амюф ывмжы юбячьсжыьвсы ыжвьсфв мыь дяв мфыбв мжы. s.ldf',
             timestamp: '123414'
         },
         {
-            img: '../../assets/images/ExampleProjectImage.jpg',
+            img: '../../assets/images/ExampleProjectImage.png',
             header: 'Второй проект',
             text: 'А дль ПьльмМю что-то на русском аывадлыжва  мдвам ямдфыьвмю вям ывм ьвыа мюв бвя юя.ьв ам.бы вам явм .ыбяв амюф ывмжы юбячьсжыьвсы ыжвьсфв мыь дяв мфыбв мжы. s.ldf',
             timestamp: '1234123'
         },
         {
-            img: '../../assets/images/ExampleProjectImage.jpg',
+            img: '../../assets/images/ExampleProjectImage.png',
             header: 'Третий проект',
             text: 'А дль ПьльмМю что-то на русском аывадлыжва  мдвам ямдфыьвмю вям ывм ьвыа мюв бвя юя.ьв ам.бы вам явм .ыбяв амюф ывмжы юбячьсжыьвсы ыжвьсфв мыь дяв мфыбв мжы. s.ldf',
             timestamp: '12451'

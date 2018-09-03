@@ -8,6 +8,7 @@ import {
     MenuComponent,
     StartComponent,
     ProjectsComponent,
+    GraphComponent,
     ChartComponent, TechniquesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent, GoToTopComponent, CarouselComponent, CarouselItemDirective, CarouselItemElement
 } from './components';
 import {
@@ -56,6 +57,7 @@ import {EtherscanService} from './services/etherscan.service';
     AppComponent,
       MenuComponent,
       StartComponent,
+      GraphComponent,
       ProjectsComponent,
       ChartComponent,
       TechniquesComponent,
