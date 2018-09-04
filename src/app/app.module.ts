@@ -5,10 +5,21 @@ import { FormsModule }   from '@angular/forms';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-    MenuComponent,
-    StartComponent,
-    ProjectsComponent,
-    ChartComponent, TechniquesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent, GoToTopComponent, CarouselComponent, CarouselItemDirective, CarouselItemElement
+  MenuComponent,
+  StartComponent,
+  ProjectsComponent,
+  ChartComponent,
+  TechniquesComponent,
+  TeamComponent,
+  JobComponent,
+  ContactComponent,
+  FooterComponent,
+  GoToTopComponent,
+  CarouselComponent,
+  CarouselItemDirective,
+  CarouselItemElement,
+  GraphComponent,
+  GraphItemDirective
 } from './components';
 import {
     MatAutocompleteModule,
@@ -66,7 +77,9 @@ import {EtherscanService} from './services/etherscan.service';
       GoToTopComponent,
       CarouselComponent,
       CarouselItemElement,
-      CarouselItemDirective
+      CarouselItemDirective,
+      GraphComponent,
+      GraphItemDirective
   ],
   imports: [
     BrowserModule,

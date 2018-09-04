@@ -10,3 +10,5 @@ export {FooterComponent} from './footer.component';
 export {GoToTopComponent} from './goToTop.component';
 export { CarouselComponent, CarouselItemElement } from './Carousel/carousel.component';
 export { CarouselItemDirective } from './Carousel/carousel-item.directive';
+export { GraphComponent, GraphItemElement } from './Graph/graph.component';
+export { GraphItemDirective } from './Graph/graph-item.directive';

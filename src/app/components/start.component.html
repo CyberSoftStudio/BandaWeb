@@ -1,4 +1,4 @@
-<div class="bt-start">
+<div class="bt-start" id="start-frame">
     <div [@moveImg]="move" class="back"></div>
     <app-chart></app-chart>
     <div class="bt-list">
@@ -23,4 +23,17 @@
             </ng-container>
         </ng-container>
     </carousel>
+  <graph #graph="graph"
+         [slide]="true"
+         [slideTime]="10"
+         [showControls]="true"
+         class="graph">
+    <ng-container *ngFor="let item of graphics">
+      <ng-container *graphItem>
+        <div class="item">
+          <h1>{{item.header}}</h1>
+        </div>
+      </ng-container>
+    </ng-container>
+  </graph>
 </div>

@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewChecked, Component, OnInit} from '@angular/core';
 import {TranslatorService} from '../services/translator.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {StartSlides} from '../dictionaries/startslides';
 import {Subscription} from 'rxjs';
+import {st} from '@angular/core/src/render3';
 
 @Component({
     selector: 'app-start',
@@ -16,11 +17,12 @@ import {Subscription} from 'rxjs';
         ])
     ]
 })
-export class StartComponent implements OnInit {
+export class StartComponent implements OnInit, AfterViewChecked {
     public move: boolean;
     public langList: any;
     public activeLang: string;
     public source: any;
+    public graphics: any;
     private changeLang = Subscription;
     constructor(
         public ts: TranslatorService) {
@@ -31,6 +33,17 @@ export class StartComponent implements OnInit {
         this.changeLang = ts.changeLang$.subscribe(data => {
             this.setSource(data['lang']);
         });
+        this.graphics = [
+          {
+            header: 'Header 1'
+          },
+          {
+            header: 'Header 2'
+          },
+          {
+            header: 'Header 3'
+          }
+        ];
     }
     ngOnInit() {
         const self = this;
@@ -51,5 +64,11 @@ export class StartComponent implements OnInit {
     }
     setSource(lang: string) {
         this.source = StartSlides[lang];
+    }
+    ngAfterViewChecked() {
+      const startFrame = document.getElementById('start-frame');
+      if(startFrame.clientHeight !== window.outerHeight) {
+        startFrame.style.height = window.outerHeight + 'px';console.log('set.........................');
+      }
     }
 }
