@@ -385,13 +385,18 @@ body #goToTop {
 body #goToTop mat-icon {
   font-size: 40px;
 }
+body #app-graph {
+  position: relative;
+}
 body #app-graph #app-graph-inner {
   overflow: hidden;
+  transition: margin-left;
 }
 body #app-graph #app-graph-inner ul {
   list-style: none;
   display: flex;
   padding: 0px;
+  margin: 0px;
 }
 body #app-graph #app-graph-inner ul .listcontent {
   height: 300px;
@@ -401,9 +406,48 @@ body #app-graph #app-graph-inner ul .listcontent img {
   width: 100%;
   height: 100%;
 }
+body #app-graph .btn {
+  position: absolute;
+  border: none;
+  height: 100%;
+  width: calc(33.33333333vw);
+  background-color: Transparent;
+}
+body #app-graph #btn-right {
+  left: calc(66.66666667vw);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+body #app-graph #btn-left {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+}
+body #app-graph .arrow {
+  position: relative;
+  height: 100px;
+  width: 25vw;
+}
+body #app-graph #right-arrow {
+  left: 30%;
+}
+body #app-graph #left-arrow {
+  right: 30%;
+}
 @media screen and (max-width: 1024px) {
   body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
+  }
+  body #app-graph #app-graph-inner ul .listcontent {
+    width: 100vw;
+  }
+  body #app-graph #btn-right {
+    background-image: none;
+  }
+  body #app-graph #btn-left {
+    background-image: none;
+  }
+  body #app-graph .arrow {
+    position: relative;
+    height: 100px;
+    width: 20vw;
   }
 }
 @media screen and (max-width: 860px) {
@@ -673,20 +717,4 @@ body #app-graph #app-graph-inner ul .listcontent img {
   .bt-contact .bt-contact-inner {
     width: 50%;
   }
-}
-#app-graph #app-graph-inner {
-  overflow: hidden;
-}
-#app-graph #app-graph-inner ul {
-  list-style: none;
-  display: flex;
-  padding: 0px;
-}
-#app-graph #app-graph-inner ul .listcontent {
-  height: 300px;
-  width: calc(33.33333333vw);
-}
-#app-graph #app-graph-inner ul .listcontent img {
-  width: 100%;
-  height: 100%;
 }

@@ -2,11 +2,6 @@
 import { AfterViewInit, Component, Directive, Input } from '@angular/core';
 import { animate, AnimationBuilder, AnimationFactory, AnimationPlayer, style } from '@angular/animations';
 
-@Directive({
-  selector: '.carousel-item'
-})
-export class CarouselItemElement {
-}
 
 @Component({
   selector: 'app-graph',
@@ -17,13 +12,13 @@ export class GraphComponent implements AfterViewInit {
 
   items: string[] = ['/assets/images/banda1.jpg', '/assets/images/banda2.jpg', '/assets/images/banda3.jpg', '/assets/images/banda4.jpg', '/assets/images/banda5.jpg']
   //timing = '7000ms cubic-bezier(0.2, 1, 0.2, 1)';
-  showControls = true;
   //private player: AnimationPlayer;
   private itemWidth: number;
   private currentSlide = 0;
+  private slidesToBeHidden;
 
   next() {
-    if (this.currentSlide + 3 === this.items.length) {
+    if (this.currentSlide + 1 + this.slidesToBeHidden === this.items.length) {
       return;
     }
     this.currentSlide = (this.currentSlide + 1) % this.items.length;
@@ -57,13 +52,16 @@ export class GraphComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.itemWidth = document.getElementById('app-graph').clientWidth * (1.0/3.0);
+      let screenWidth = document.getElementById('app-graph').clientWidth;
+
+      if (screenWidth >= 1024) {
+        this.itemWidth = screenWidth * (1/3.0);
+        this.slidesToBeHidden = 2;
+      } 
+      else {
+        this.itemWidth = screenWidth;
+        this.slidesToBeHidden = 0; 
+      }
     });
-  }
-
-
-
-  ngOnInit() {
-
   }
 }
