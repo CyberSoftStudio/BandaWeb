@@ -385,6 +385,22 @@ body #goToTop {
 body #goToTop mat-icon {
   font-size: 40px;
 }
+body #app-graph #app-graph-inner {
+  overflow: hidden;
+}
+body #app-graph #app-graph-inner ul {
+  list-style: none;
+  display: flex;
+  padding: 0px;
+}
+body #app-graph #app-graph-inner ul .listcontent {
+  height: 300px;
+  width: calc(33.33333333vw);
+}
+body #app-graph #app-graph-inner ul .listcontent img {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 1024px) {
   body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
