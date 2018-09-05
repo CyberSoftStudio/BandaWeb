@@ -50,6 +50,7 @@ import {
 } from '@angular/material';
 import {TranslatorService} from './services/translator.service';
 import {EtherscanService} from './services/etherscan.service';
+import { PlotComponent } from './components/plot/plot.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import {EtherscanService} from './services/etherscan.service';
       GoToTopComponent,
       CarouselComponent,
       CarouselItemElement,
-      CarouselItemDirective
+      CarouselItemDirective,
+      PlotComponent
   ],
   imports: [
     BrowserModule,
