@@ -1,3 +1,8 @@
-<p>
-  plot works!
-</p>
+<div id="plots">
+    <div class="plot-container">
+        <plotly-plot [data]="plot1.data" [layout]="plot1.layout" id="left-plot"></plotly-plot>
+    </div>
+    <div class="plot-container">
+        <plotly-plot [data]="plot2.data" [layout]="plot2.layout" id="right-plot"></plotly-plot>
+    </div>
+</div>

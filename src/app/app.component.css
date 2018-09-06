@@ -431,6 +431,17 @@ body #app-graph #right-arrow {
 body #app-graph #left-arrow {
   right: 30%;
 }
+body #plots {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+body #plots .plot-container {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
 @media screen and (max-width: 1024px) {
   body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
