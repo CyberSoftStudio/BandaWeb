@@ -1,8 +1,8 @@
 <div id="plots">
     <div class="plot-container">
-        <plotly-plot [data]="plot1.data" [layout]="plot1.layout" id="left-plot"></plotly-plot>
+        <plotly-plot [useResizeHandler]="true" [data]="plot1.data" [layout]="plot1.layout" class="plotly-plot" id="left-plot"></plotly-plot>
     </div>
     <div class="plot-container">
-        <plotly-plot [data]="plot2.data" [layout]="plot2.layout" id="right-plot"></plotly-plot>
+        <plotly-plot [useResizeHandler]="true" [data]="plot2.data" [layout]="plot2.layout" class="plotly-plot" id="right-plot"></plotly-plot>
     </div>
 </div>

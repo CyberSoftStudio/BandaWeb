@@ -442,6 +442,10 @@ body #plots .plot-container {
   height: 100%;
   width: 50%;
 }
+body #plots .plot-container .plotly-plot {
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 1024px) {
   body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;

@@ -8,18 +8,16 @@ import { Observable } from 'rxjs';
 
 export class PlotService {
   public apiURL: string = 'http://104.248.29.132:8080/data';
-
-  constructor() { }
+  constructor() {
+   }
 
   
   public getObservable (currencyCode: string) {
-
-    let lastSecondsToCheck = 1000;
-
+    let lastSecondsToCheck = 3600;
     let dataGetter =  function sequenceSubscriber(observer) {
 
       function startEmmiting() {
-        setInterval(() => {
+
           async function _getDayBlocks() {
             let toTime = Math.round(new Date().getTime() / 1000);
             const response = axios.get(
@@ -36,9 +34,9 @@ export class PlotService {
               observer.next(resp);
             }
           }).catch(err => console.dir(err));
-        }, 5000);
       }
-
+      startEmmiting();
+      setInterval(startEmmiting, 5000);
       /*let timeToCheckAtLaunch;
 
       switch (currencyCode) {
@@ -67,7 +65,7 @@ export class PlotService {
       console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAA');
       console.log(firstResponse);*/
      
-      startEmmiting();
+      
     }
 
     return new Observable(dataGetter);
