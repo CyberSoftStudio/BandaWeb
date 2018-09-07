@@ -90,7 +90,7 @@ export class CarouselComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         // For some reason only here I need to add setTimeout, in my local env it's working without this.
-        setTimeout(() => {
+        setTimeout(() => {console.dir(this.itemsElements);
             this.itemWidth = this.itemsElements.first.nativeElement.getBoundingClientRect().width;
             this.carouselWrapperStyle = {
                 width: `${this.itemWidth}px`

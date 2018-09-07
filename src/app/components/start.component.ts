@@ -4,6 +4,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 import {StartSlides} from '../dictionaries/startslides';
 import {Subscription} from 'rxjs';
 import {st} from '@angular/core/src/render3';
+import {forEach} from '@angular/router/src/utils/collection';
 
 @Component({
     selector: 'app-start',
@@ -42,6 +43,9 @@ export class StartComponent implements OnInit, AfterViewChecked {
           },
           {
             header: 'Header 3'
+          },
+          {
+            header: 'Header 4'
           }
         ];
     }
@@ -67,8 +71,14 @@ export class StartComponent implements OnInit, AfterViewChecked {
     }
     ngAfterViewChecked() {
       const startFrame = document.getElementById('start-frame');
-      if(startFrame.clientHeight !== window.outerHeight) {
-        startFrame.style.height = window.outerHeight + 'px';console.log('set.........................');
+      if (startFrame.clientHeight !== window.outerHeight) {
+        startFrame.style.height = window.outerHeight + 'px';
+        const items = startFrame.querySelectorAll('.graph-item');
+        // for (let i = 0, i < items.lenght, i++) {};
+        items.forEach(item => {
+          // console.dir(item.lastChild.clientWidth);
+          item.lastChild.style.width = startFrame.clientWidth * 0.7 + 'px';
+        })
       }
     }
 }

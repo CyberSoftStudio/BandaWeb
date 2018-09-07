@@ -19,7 +19,8 @@ import {
   CarouselItemDirective,
   CarouselItemElement,
   GraphComponent,
-  GraphItemDirective
+  GraphItemDirective,
+  GraphItemElement
 } from './components';
 import {
     MatAutocompleteModule,
@@ -79,7 +80,8 @@ import {EtherscanService} from './services/etherscan.service';
       CarouselItemElement,
       CarouselItemDirective,
       GraphComponent,
-      GraphItemDirective
+      GraphItemDirective,
+      GraphItemElement
   ],
   imports: [
     BrowserModule,

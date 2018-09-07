@@ -45,6 +45,7 @@ export class GraphItemElement {
     .graph-wrapper {
       overflow: hidden;
       height: 100%;
+      margin-left: 15%;
     }
 
     .graph-inner {
@@ -57,7 +58,7 @@ export class GraphItemElement {
 
   `]
 })
-export class GraphComponent implements AfterViewInit{
+export class GraphComponent implements AfterViewInit {
   @ContentChildren(GraphItemDirective) items: QueryList<GraphItemDirective>;
   @ViewChildren(GraphItemElement, { read: ElementRef }) private itemsElements: QueryList<ElementRef>;
   @ViewChild('graph') private graph: ElementRef;
@@ -105,7 +106,7 @@ export class GraphComponent implements AfterViewInit{
 
   ngAfterViewInit() {
     // For some reason only here I need to add setTimeout, in my local env it's working without this.
-    setTimeout(() => {
+    setTimeout(() => {console.dir(this.itemsElements);
       this.itemWidth = this.itemsElements.first.nativeElement.getBoundingClientRect().width;
       this.graphWrapperStyle = {
         width: `${this.itemWidth}px`
