@@ -15,7 +15,7 @@
     <mat-menu #menu="matMenu">
         <button mat-menu-item *ngFor="let lnk of menuLinks"
                 (click)="select($event, lnk)">
-            <mat-icon>dialpad</mat-icon>
+            <!--<mat-icon>dialpad</mat-icon>-->
             <span>{{ts.translate('menu.' + lnk)}}</span>
         </button>
     </mat-menu>

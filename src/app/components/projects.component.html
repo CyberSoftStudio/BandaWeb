@@ -5,7 +5,7 @@
 
     <ul class="project-list">
         <li *ngFor="let pro of source">
-            <img mat-card-image src={{pro.img}} alt="{{pro.header}} img" class="project-card-image">
+            <!--<img mat-card-image src={{pro.img}} alt="{{pro.header}} img" class="project-card-image">-->
             <mat-card class="project-card">
                 <mat-card-header class="header">
                     <mat-card-title><h2>{{pro.header}}</h2></mat-card-title>
@@ -20,4 +20,8 @@
             </mat-card>
         </li>
     </ul>
+    <!--<div class="project-image">-->
+        <!--<p>{{source[2].sign}}</p>-->
+        <!--<img mat-card-image src={{source[2].img}} alt="{{source[2].header}} img">-->
+    <!--</div>-->
 </div>

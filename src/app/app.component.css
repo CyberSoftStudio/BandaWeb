@@ -37,7 +37,7 @@ a {
 .bt-header span {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   background-color: #937bff;
   height: 2px;
@@ -59,27 +59,30 @@ a {
   margin: 0;
   padding: 0;
 }
-body {
+html {
+  height: 0;
+}
+html body {
   margin: 0;
   padding: 0;
 }
-body .bt-logo {
+html body .bt-logo {
   display: block;
   position: absolute;
   margin: 15px;
 }
-body .bt-logo p {
+html body .bt-logo p {
   margin: 0;
   padding: 0;
   width: 85px;
 }
-body .bt-logo p:nth-child(1) {
+html body .bt-logo p:nth-child(1) {
   color: #937bff;
   font-size: 20px;
   font-weight: 800;
   letter-spacing: 7.0px;
 }
-body .bt-logo p:nth-child(2) {
+html body .bt-logo p:nth-child(2) {
   margin-top: -4px;
   padding: 0 2px;
   color: #000000;
@@ -90,7 +93,7 @@ body .bt-logo p:nth-child(2) {
   background-color: #937bff;
   border-radius: 2px;
 }
-body .bt-menu {
+html body .bt-menu {
   display: block;
   position: fixed;
   width: 100%;
@@ -99,88 +102,130 @@ body .bt-menu {
   z-index: 100;
   background: linear-gradient(rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0));
 }
-body .bt-menu nav {
+html body .bt-menu nav {
   position: absolute;
   width: 600px;
   right: 0;
   border-bottom: none;
 }
-body .bt-menu nav a {
+html body .bt-menu nav a {
   padding: 0;
   min-width: 110px;
   color: #f6ffd7;
 }
-body .bt-menu button {
+html body .bt-menu button {
   position: absolute;
   right: 15px;
 }
-body .bt-menu button mat-icon {
+html body .bt-menu button mat-icon {
   color: #f6ffd7;
   font-size: 40px;
 }
-body .bt-start {
+html body .bt-menu mat-menu {
+  background: transparent!important;
+}
+html body .bt-menu mat-menu mat-menu-icon {
+  background: transparent;
+}
+html body .bt-start {
   display: block;
   position: relative;
   width: 100%;
   min-height: 300px;
   margin: 0;
   padding: 0;
-  min-height: 450px;
+  height: 600px;
   overflow: hidden;
 }
-body .bt-start .back {
+html body .bt-start .back {
   display: block;
   position: absolute;
   height: 100%;
   width: 150%;
+  top: 0;
   margin-left: -50%;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('../assets/images/banda.jpg') no-repeat;
   background-size: cover;
   background-position: right;
 }
-body .bt-start .bt-list {
+html body .bt-start .bt-list {
   display: block;
   position: absolute;
-  bottom: 5px;
+  bottom: 30%;
   right: 5px;
   width: 80px;
 }
-body .bt-start .bt-list mat-checkbox {
+html body .bt-start .bt-list mat-checkbox {
   color: #f6ffd7;
   font-size: 12px;
 }
-body .bt-start .bt-list mat-checkbox .mat-checkbox-background {
+html body .bt-start .bt-list mat-checkbox .mat-checkbox-background {
   background-color: rgba(246, 255, 215, 0.5);
 }
-body .bt-start .slides {
+html body .bt-start .slides {
   display: block;
   position: absolute;
   top: 100px;
   right: 10%;
   border-left: 2px solid #f6ffd7;
 }
-body .bt-start .slides .item {
+html body .bt-start .slides .item {
   width: 350px;
   height: 150px;
 }
-body .bt-start .slides .item h3 {
+html body .bt-start .slides .item h3 {
   color: #937bff;
   font-weight: 800;
   font-size: 30px;
   margin: 10px 5px;
 }
-body .bt-start .slides .item p {
+html body .bt-start .slides .item p {
   color: #f6ffd7;
   margin: 0;
   padding: 0 10px;
 }
-body .bt-sm-screen {
+html body .graph {
+  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  bottom: 0;
+}
+html body .graph .item {
+  width: 1200px;
+  height: 500px;
+}
+html body .graph .item h1 {
+  display: block;
+  text-align: center;
+}
+html body .graph .item .plots {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+html body .graph .item .plots .plot-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+html body .graph .item .plots .plot-container .plotly-plot {
+  width: 100%;
+  height: 100%;
+}
+html body .bt-sm-screen {
   display: none;
 }
-body .bt-lg-screen {
+html body .bt-lg-screen {
   display: block;
 }
-body #techniques .bt-techniques {
+html body #techniques .bt-techniques {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,7 +237,7 @@ body #techniques .bt-techniques {
   background-attachment: fixed;
   padding-bottom: 40px;
 }
-body #techniques .bt-techniques h1 {
+html body #techniques .bt-techniques h1 {
   color: #f6ffd7;
   display: block;
   position: relative;
@@ -200,50 +245,51 @@ body #techniques .bt-techniques h1 {
   text-align: center;
   margin: 50px 0 20px 0;
 }
-body #techniques .bt-techniques h1 span {
+html body #techniques .bt-techniques h1 span {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   background-color: #937bff;
   height: 2px;
   width: 100%;
 }
-body #techniques .bt-techniques .bt-card-block {
+html body #techniques .bt-techniques .bt-card-block {
   display: flex;
 }
-body #techniques .bt-techniques .bt-card-block .item {
+html body #techniques .bt-techniques .bt-card-block .item {
   position: relative;
-  width: 450px;
+  width: 500px;
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid #937bff;
   border-radius: 3px;
   margin: 10px;
 }
-body #techniques .bt-techniques .bt-card-block .item h2 {
+html body #techniques .bt-techniques .bt-card-block .item h2 {
   background: #937bff;
   color: #f6ffd7;
   font-weight: 800;
   margin: 0;
   padding: 10px 20px;
 }
-body #techniques .bt-techniques .bt-card-block .item h2 span {
+html body #techniques .bt-techniques .bt-card-block .item h2 span {
   display: block;
   width: 100%;
   font-size: 15px;
   line-height: 1;
 }
-body #techniques .bt-techniques .bt-card-block .item p {
+html body #techniques .bt-techniques .bt-card-block .item p {
   color: #f6ffd7;
   margin: 0;
   padding: 10px;
+  text-indent: 40px;
 }
-body #techniques .bt-techniques .bt-card-block .item img {
+html body #techniques .bt-techniques .bt-card-block .item img {
   display: block;
   background: radial-gradient(#937bff 5%, transparent);
   width: 100%;
 }
-body #team .bt-team {
+html body #team .bt-team {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,7 +297,7 @@ body #team .bt-team {
   width: 100%;
   background-image: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
 }
-body #team .bt-team h1 {
+html body #team .bt-team h1 {
   color: #f6ffd7;
   display: block;
   position: relative;
@@ -261,21 +307,23 @@ body #team .bt-team h1 {
   width: 100px;
   color: rgba(0, 0, 0, 0.8);
 }
-body #team .bt-team h1 span {
+html body #team .bt-team h1 span {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   background-color: #937bff;
   height: 2px;
   width: 100%;
 }
-body #team .bt-team .bt-card-block {
+html body #team .bt-team .bt-card-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
-body #team .bt-team .bt-card-block .item {
+html body #team .bt-team .bt-card-block .item {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -283,8 +331,10 @@ body #team .bt-team .bt-card-block .item {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   overflow: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.5s;
 }
-body #team .bt-team .bt-card-block .item .header {
+html body #team .bt-team .bt-card-block .item .header {
   display: block;
   text-align: center;
   margin: 0;
@@ -292,15 +342,15 @@ body #team .bt-team .bt-card-block .item .header {
   font-weight: 800;
   background: transparent;
 }
-body #team .bt-team .bt-card-block .item div {
+html body #team .bt-team .bt-card-block .item div {
   display: flex;
   width: 100%;
   height: 150px;
 }
-body #team .bt-team .bt-card-block .item div .image {
+html body #team .bt-team .bt-card-block .item div .image {
   width: 100px;
 }
-body #team .bt-team .bt-card-block .item div .content {
+html body #team .bt-team .bt-card-block .item div .content {
   margin: 0;
   padding: 5px;
   font-size: 14px;
@@ -308,7 +358,58 @@ body #team .bt-team .bt-card-block .item div .content {
   background: white;
   text-align: center;
 }
-body app-chart {
+html body #team .bt-team .bt-card-block .item:hover {
+  transform: rotateY(25deg);
+}
+html body #contact {
+  margin: 0;
+  padding: 0 0 0 30px;
+}
+html body #footer .bt-footer {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+}
+html body #footer .bt-footer .footer-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  max-width: 150px;
+}
+html body #footer .bt-footer .footer-menu .menu-item {
+  position: relative;
+  cursor: pointer;
+  transition: width 2s;
+}
+html body #footer .bt-footer .footer-menu .menu-item span:nth-child(1) {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #f6ffd7;
+}
+html body #footer .bt-footer .footer-menu .menu-item span:nth-child(2) {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #f6ffd7;
+  width: 100%;
+  opacity: 0.4;
+}
+html body #footer .bt-footer .footer-menu .menu-item a {
+  display: block;
+  color: #f6ffd7;
+  text-decoration: none;
+  margin: 0;
+  padding: 20px 20px 10px 10px;
+  opacity: 0.4;
+}
+html body #footer .bt-footer .footer-menu .menu-item:hover a {
+  opacity: 1;
+}
+html body #footer .bt-footer .footer-menu .menu-item:hover span:nth-child(1) {
+  width: 100%;
+}
+html body app-chart {
   display: block;
   position: absolute;
   top: 100px;
@@ -318,7 +419,7 @@ body app-chart {
   transform-style: preserve-3d;
   perspective: 400px;
 }
-body app-chart .bt-chart {
+html body app-chart .bt-chart {
   display: block;
   position: absolute;
   height: 100%;
@@ -327,7 +428,7 @@ body app-chart .bt-chart {
   transform: rotateY(-60deg) rotateX(-10deg);
   perspective: 300px;
 }
-body app-chart .bt-chart .cube {
+html body app-chart .bt-chart .cube {
   display: block;
   position: absolute;
   bottom: 0;
@@ -335,7 +436,7 @@ body app-chart .bt-chart .cube {
   height: 160px;
   transform-style: preserve-3d;
 }
-body app-chart .bt-chart .cube .side {
+html body app-chart .bt-chart .cube .side {
   font-family: mcFontLight;
   font-weight: 100;
   font-size: 20px;
@@ -355,25 +456,25 @@ body app-chart .bt-chart .cube .side {
   border: 1px solid #f6ffd7;
   border-radius: 3px;
 }
-body app-chart .bt-chart .cube .side:nth-child(1) {
+html body app-chart .bt-chart .cube .side:nth-child(1) {
   transform: translateZ(80px);
 }
-body app-chart .bt-chart .cube .side:nth-child(2) {
+html body app-chart .bt-chart .cube .side:nth-child(2) {
   transform: translateZ(-80px);
 }
-body app-chart .bt-chart .cube .side:nth-child(3) {
+html body app-chart .bt-chart .cube .side:nth-child(3) {
   transform: translateX(-80px) rotateY(-90deg);
 }
-body app-chart .bt-chart .cube .side:nth-child(4) {
+html body app-chart .bt-chart .cube .side:nth-child(4) {
   transform: translateX(80px) rotateY(90deg);
 }
-body app-chart .bt-chart .cube .side:nth-child(5) {
+html body app-chart .bt-chart .cube .side:nth-child(5) {
   transform: translateY(-80px) rotateX(90deg);
 }
-body app-chart .bt-chart .cube .side:nth-child(6) {
+html body app-chart .bt-chart .cube .side:nth-child(6) {
   transform: translateY(80px) rotateX(-90deg);
 }
-body #goToTop {
+html body #goToTop {
   display: block;
   position: fixed;
   bottom: 30px;
@@ -382,45 +483,69 @@ body #goToTop {
   z-index: 1000;
   color: #937bff;
 }
-body #goToTop mat-icon {
+html body #goToTop mat-icon {
   font-size: 40px;
 }
+@media screen and (max-width: 1268px) {
+  html body .graph .item {
+    width: 1000px;
+  }
+}
 @media screen and (max-width: 1024px) {
-  body #techniques .bt-techniques .bt-card-block .item {
+  html body .graph .item {
+    width: 800px;
+  }
+  html body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
   }
 }
 @media screen and (max-width: 860px) {
-  body .bt-sm-screen {
+  html body .bt-start .slides {
+    top: 60px;
+    left: 35%;
+  }
+  html body .bt-start .slides .item {
+    width: 300px;
+  }
+  html body .bt-start .slides .item h3 {
+    font-size: 25px;
+  }
+  html body .graph .item {
+    width: 600px;
+  }
+  html body .bt-sm-screen {
     display: block;
   }
-  body .bt-lg-screen {
+  html body .bt-lg-screen {
     display: none;
   }
-  body #techniques .bt-techniques .bt-card-block {
+  html body #techniques .bt-techniques .bt-card-block {
     flex-direction: column;
   }
-  body #techniques .bt-techniques .bt-card-block .item {
+  html body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
+  }
+  html body .bt-projects .project-image {
+    width: 80%;
   }
 }
 @media screen and (max-width: 640px) {
-  body .bt-start .slides {
+  html body .bt-start .slides {
     top: 60px;
     left: 15%;
   }
-  body .bt-start .slides .item {
+  html body .bt-start .slides .item {
     width: 300px;
   }
-  body .bt-start .slides .item h3 {
+  html body .bt-start .slides .item h3 {
     font-size: 25px;
   }
-  body #team .bt-team .bt-card-block {
+  html body #team .bt-team .bt-card-block {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 540px) {
-  body #techniques .bt-techniques .bt-card-block .item {
+  html body #techniques .bt-techniques .bt-card-block .item {
     width: 93%;
   }
 }
@@ -490,6 +615,7 @@ body #goToTop mat-icon {
   align-items: center;
   margin: 0;
   padding: 30px 0 100px 0;
+  background: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
 }
 .bt-projects h1 {
   color: #f6ffd7;
@@ -504,17 +630,31 @@ body #goToTop mat-icon {
 .bt-projects h1 span {
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   background-color: #937bff;
   height: 2px;
   width: 100%;
+}
+.bt-projects .project-image {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.bt-projects .project-image img {
+  margin: 0;
+  width: 100%;
+}
+.bt-projects .project-image p {
+  text-align: center;
 }
 .bt-projects .project-list {
   margin-right: 3%;
   margin-left: 3%;
 }
 .bt-projects .project-card {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+  padding-top: 0!important;
   border-radius: 5px;
 }
 .bt-projects .project-card .header {
@@ -522,33 +662,40 @@ body #goToTop mat-icon {
 }
 .bt-projects .project-card .header h2 {
   font-weight: 800;
+  color: #937bff;
 }
 .bt-projects .project-card .content {
   padding: 15px;
   text-align: justify;
+  text-indent: 40px;
 }
 .bt-projects ul {
   list-style: none;
   padding-left: 0;
-  padding-bottom: 200px;
+  padding-bottom: 50px;
+  columns: 1!important;
+  -webkit-columns: 1;
+  -moz-columns: 1;
 }
 .bt-projects li {
   margin-bottom: 30px;
-}
-.bt-projects .project-card-image {
   position: relative;
+}
+.bt-projects li .project-card-image {
+  display: block;
+  position: absolute;
   border-radius: 5px;
   z-index: 1;
-  box-shadow: -10px 10px 10px grey;
+  background: transparent;
+  right: -10px;
+  top: -30px;
+  height: 150px;
 }
 @media screen and (min-width: 860px) {
   .bt-projects ul {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
-  }
-  .bt-projects li {
-    min-height: 550px;
   }
   .bt-projects .project-card-image {
     left: 30%;
@@ -589,7 +736,6 @@ body #goToTop mat-icon {
     padding-top: 5%;
     margin-right: 10px;
     margin-left: 10px;
-    width: 80%;
   }
 }
 @media screen and (max-width: 450px) {
