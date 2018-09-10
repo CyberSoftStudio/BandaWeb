@@ -16,7 +16,7 @@ export class MenuComponent {
         this.menuLinks.push('projects');
         this.menuLinks.push('techniques');
         this.menuLinks.push('team');
-        this.menuLinks.push('job');
+        // this.menuLinks.push('job');
         this.menuLinks.push('contact');
         this.activeLink = this.menuLinks[0];
         this.config = config().app;

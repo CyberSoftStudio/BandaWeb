@@ -1,13 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import { PlotlyModule } from 'angular-plotly.js';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
-    MenuComponent,
-    StartComponent,
-    ProjectsComponent,
-    ChartComponent, TechniquesComponent, TeamComponent, JobComponent, ContactComponent, FooterComponent, GoToTopComponent
+  MenuComponent,
+  StartComponent,
+  ProjectsComponent,
+  ChartComponent,
+  TechniquesComponent,
+  TeamComponent,
+  JobComponent,
+  ContactComponent,
+  FooterComponent,
+  GoToTopComponent,
+  CarouselComponent,
+  CarouselItemDirective,
+  CarouselItemElement,
+  GraphComponent, GraphItemDirective, GraphItemElement
 } from './components';
 import {
     MatAutocompleteModule,
@@ -48,6 +61,8 @@ import {
 } from '@angular/material';
 import {TranslatorService} from './services/translator.service';
 import {EtherscanService} from './services/etherscan.service';
+import {PlotComponent} from './components/plot.component';
+import {PlotService} from './services/plot.service';
 
 
 @NgModule({
@@ -62,7 +77,14 @@ import {EtherscanService} from './services/etherscan.service';
       JobComponent,
       ContactComponent,
       FooterComponent,
-      GoToTopComponent
+      GoToTopComponent,
+      CarouselComponent,
+      CarouselItemElement,
+      CarouselItemDirective,
+    GraphComponent,
+    GraphItemDirective,
+    GraphItemElement,
+    PlotComponent
   ],
   imports: [
     BrowserModule,
@@ -103,10 +125,13 @@ import {EtherscanService} from './services/etherscan.service';
       MatToolbarModule,
       MatTooltipModule,
       MatTreeModule,
+      FormsModule,
+    PlotlyModule
   ],
   providers: [
       TranslatorService,
-      EtherscanService
+      EtherscanService,
+    PlotService
   ],
   bootstrap: [AppComponent]
 })

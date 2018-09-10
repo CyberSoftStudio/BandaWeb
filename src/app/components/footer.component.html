@@ -1,1 +1,14 @@
-<div class="bt-block bt-footer">Footer</div>
+<div class="bt-block bt-footer">
+    <ng-container>
+        <ul class="footer-menu">
+            <li class="menu-item"
+                    *ngFor="let item of menuList">
+                <a href="{{'#' + item}}"
+                   (click)="select($event, item)"
+                >{{ts.translate('menu.' + item)}}</a>
+                <span></span>
+                <span></span>
+            </li>
+        </ul>
+    </ng-container>
+</div>

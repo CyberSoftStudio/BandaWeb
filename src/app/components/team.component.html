@@ -3,16 +3,15 @@
         <span></span>
     </h1>
     <div class="bt-card-block">
-        <mat-card *ngFor="let method of source">
-            <mat-card-header>
-                <mat-card-title>
-                    {{method.header}}
-                </mat-card-title>
-            </mat-card-header>
-            <img src="{{method.img}}"/>
-            <mat-card-content>
-                <p>{{method.text}}</p>
-            </mat-card-content>
-        </mat-card>
+        <ng-container *ngFor="let person of source">
+            <div class="item">
+                <h4 class="header">{{person.name}}
+                </h4>
+                <div>
+                    <img class="image" src="{{person.img}}"/>
+                    <p class="content">{{person.specializations}}</p>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>

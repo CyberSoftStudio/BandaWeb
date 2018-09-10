@@ -2,7 +2,7 @@ export const EN = {
     menu: {
         home: 'HOME',
         techniques: 'TECHNIQUES',
-        projects: 'PROJECTS',
+        projects: 'PRIORITIES',
         job: 'JOB',
         team: 'TEAM',
         contact: 'CONTACT',
@@ -24,7 +24,8 @@ export const EN = {
         RU: 'pусский',
         EN: 'english',
         DE: 'deutsche',
-        CN: '汉字'
+        CN: '汉字',
+        major_priorities: 'Major Priorities'
     },
     errors: {},
     info: {},

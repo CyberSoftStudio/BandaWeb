@@ -1,12 +1,42 @@
-<div class="bt-start">
-    <div [@moveImg]="move" class="back"></div>
-    <app-chart></app-chart>
-    <div class="bt-list">
-        <mat-checkbox
-                *ngFor="let lang of langList"
-                (click)="setLang($event, lang)"
-                [checked]="activeLang === lang">
-            {{ts.translate('labels.' + lang)}}
-        </mat-checkbox>
-    </div>
+<div class="bt-start" id="start-frame">
+  <div [@moveImg]="move" class="back"></div>
+  <app-chart></app-chart>
+  <div class="bt-list">
+    <mat-checkbox
+      *ngFor="let lang of langList"
+      (click)="setLang($event, lang)"
+      [checked]="activeLang === lang">
+      {{ts.translate('labels.' + lang)}}
+    </mat-checkbox>
+  </div>
+  <carousel #carousel="carousel"
+            [showControls]="false"
+            class="slides"
+            [slide]="true"
+            [slideTime]="10">
+    <ng-container *ngFor="let item of source;">
+      <ng-container *carouselItem>
+        <div class="item">
+          <h3>{{item.header}}</h3>
+          <p>{{item.text}}</p>
+        </div>
+      </ng-container>
+    </ng-container>
+  </carousel>
 </div>
+<graph #graph="graph"
+       [slide]="false"
+       [slideTime]="10"
+       [showControls]="true"
+       class="graph bt-block">
+  <ng-container *ngFor="let item of graphics">
+    <ng-container *graphItem>
+      <div class="item">
+        <h1>{{item.code + ' realtime blocks data'}}</h1>
+        <app-plot
+          [currencyCode]=item.code
+        ></app-plot>
+      </div>
+    </ng-container>
+  </ng-container>
+</graph>
