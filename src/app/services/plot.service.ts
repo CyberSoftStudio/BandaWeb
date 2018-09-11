@@ -23,7 +23,7 @@ export class PlotService {
           const response = axios.get(
             'http://104.248.29.132:8080/data' + '?currency=' + currencyCode + '&last=' + lastSecondsToCheck);
 
-          console.log('http://104.248.29.132:8080/data' + '?currency=' + currencyCode + '&last=' + lastSecondsToCheck);
+          //console.log('http://104.248.29.132:8080/data' + '?currency=' + currencyCode + '&last=' + lastSecondsToCheck);
           return response || 0;
         }
 
@@ -37,31 +37,6 @@ export class PlotService {
       }
       startEmmiting();
       setInterval(startEmmiting, 5000);
-      /*let timeToCheckAtLaunch;
-      switch (currencyCode) {
-        case 'btc':
-          timeToCheckAtLaunch = 15*3600;
-          break;
-        case 'eth':
-          timeToCheckAtLaunch = 15*60;
-          break;
-        case 'bch':
-          timeToCheckAtLaunch = 15*3600;
-          break;
-        case 'btg':
-          timeToCheckAtLaunch = 15*3600;
-          break;
-        case 'ltc':
-          timeToCheckAtLaunch = 15*60;
-          break;
-        default:
-          timeToCheckAtLaunch = 15*3600;
-      }
-      let firstResponse = axios.get(
-        'http://104.248.29.132:8080/data' + '?currency=' + currencyCode + '&last=' + timeToCheckAtLaunch);
-      console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAA');
-      console.log(firstResponse);*/
-
 
     }
 

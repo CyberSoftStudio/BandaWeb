@@ -28,9 +28,19 @@ export class GraphItemElement {
         </li>
       </ul>
     </section>
-    <div *ngIf="showControls" style="margin-top: 1em">
-      <button (click)="prev()" class="btn btn-default">Prev</button>
-      <button (click)="next()" class="btn btn-default">Next</button>
+    <div *ngIf="showControls" style="margin-top: 1em" class="btn-container">
+      <button (click)="prev()" class="btn btn-default" id="btn-left">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path fill="#aaa" d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"/>
+          <path fill="none" d="M0 0h24v24H0z"/>
+        </svg>
+      </button>
+      <button (click)="next()" class="btn btn-default" id="btn-right" align="right">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path fill="#aaa" d="M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z"/>
+          <path fill="none" d="M0 0h24v24H0z"/>
+        </svg>
+      </button>
     </div>
   `,
   styles: [`
@@ -62,7 +72,7 @@ export class GraphComponent implements AfterViewInit {
   @ContentChildren(GraphItemDirective) items: QueryList<GraphItemDirective>;
   @ViewChildren(GraphItemElement, { read: ElementRef }) private itemsElements: QueryList<ElementRef>;
   @ViewChild('graph') private graph: ElementRef;
-  @Input() timing = '7000ms cubic-bezier(0.2, 1, 0.2, 1)';
+  @Input() timing = '2000ms cubic-bezier(0.2, 1, 0.2, 1)';
   @Input() showControls = true;
   @Input() slide = false;
   @Input() slideTime = 2;

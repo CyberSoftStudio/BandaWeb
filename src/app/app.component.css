@@ -215,9 +215,65 @@ html body .graph .item .plots .plot-container {
   height: 100%;
   width: 100%;
 }
-html body .graph .item .plots .plot-container .plotly-plot {
+html body .graph .item .plots .plot-container .plot-body {
   width: 100%;
   height: 100%;
+}
+html body .graph .item .plots .plot-container .plot-body .plotly-plot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+html body .graph .item .plots .plot-container .plot-body .plotly-plot .modebar {
+  display: none!important;
+}
+html body .graph .item .plots .plot-container .plot-body h3 {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+}
+html body .graph .btn-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+html body .graph .btn-container .btn {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: transparent;
+  height: 5vw;
+  width: 5vw;
+  top: 50%;
+  cursor: pointer;
+  outline: inherit;
+}
+html body .graph .btn-container .btn svg {
+  position: relative;
+  height: 3.5vw;
+  width: 3.5vw;
+}
+html body .graph .btn-container .btn:hover {
+  background-color: rgba(192, 192, 192, 0.308);
+}
+html body .graph .btn-container .btn:active {
+  box-shadow: 0 0 30px 2px #555;
+  height: 4.8vw;
+  width: 4.8vw;
+}
+html body .graph .btn-container #btn-right {
+  flex: right;
+  right: 5vw;
+}
+html body .graph .btn-container #btn-right svg {
+  right: -8%;
+}
+html body .graph .btn-container #btn-left {
+  left: 5vw;
+}
+html body .graph .btn-container #btn-left svg {
+  left: 18%;
 }
 html body .bt-sm-screen {
   display: none;
@@ -511,7 +567,27 @@ html body #goToTop mat-icon {
     font-size: 25px;
   }
   html body .graph .item {
-    width: 600px;
+    width: 100vw;
+    height: 800px;
+  }
+  html body .graph .item .plots {
+    flex-direction: column;
+  }
+  html body .graph .item .plots .plot-container {
+    height: 380px;
+  }
+  html body .graph .btn-container .btn {
+    height: 50px;
+    width: 50px;
+  }
+  html body .graph .btn-container .btn svg {
+    height: 35px;
+    width: 35px;
+  }
+  html body .graph .btn-container .btn:active {
+    box-shadow: 0 0 20px 2px #555;
+    height: 48px;
+    width: 48px;
   }
   html body .bt-sm-screen {
     display: block;

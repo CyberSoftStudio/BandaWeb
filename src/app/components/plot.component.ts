@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PlotService } from '../services/plot.service';
 import * as Plotly from 'plotly.js';
@@ -24,21 +24,44 @@ export class PlotComponent implements OnInit {
       family: 'Old Standard TT, serif',
       size: 14,
       color: 'black'
-    }
+    },
+    fixedrange: true
+  };
+
+  yaxisStyle = {
+    fixedrange: true
   };
 
   public plot1 = {
     data: [],
-    layout: { autosize: true, title: 'Transactions' },
+    layout: {
+      autosize: true,
+      xaxis: {
+        fixedrange: true
+      },
+      yaxis: {
+        fixedrange: true
+      }
+    },
     xaxis: this.xaxisStyle,
+    yaxis: this.yaxisStyle,
     exponentformat: 'e',
     showexponent: 'all'
   };
 
   public plot2 = {
     data: [],
-    layout: { autosize: true, title: 'Output values' },
+    layout: {
+      autosize: true,
+      xaxis: {
+        fixedrange: true
+      },
+      yaxis: {
+        fixedrange: true
+      }
+    },
     xaxis: this.xaxisStyle,
+    yaxis: this.yaxisStyle,
     exponentformat: 'e',
     showexponent: 'all'
   };
@@ -65,7 +88,6 @@ export class PlotComponent implements OnInit {
     }
 
     for (let i = nextBlockArray.length - 1; i >= 0; i--) {
-      console.log(this.blocks[this.blocks.length - 1].time);
       if (this.blocks[this.blocks.length - 1].time < nextBlockArray[i].time
         && nextBlockArray[i]["tx_count"] > 0
         && nextBlockArray[i]["tx_sum"] > 0) {
@@ -85,7 +107,7 @@ export class PlotComponent implements OnInit {
     let count_vals = []
     let sum_vals = []
     for (let i = 0; i < this.blocks.length; ++i) {
-      x_vals.push('№' + this.blocks[i]["height"]);
+      x_vals.push(this.blocks[i]["height"] + '\u200B');
       count_vals.push(this.blocks[i]["tx_count"]);
       sum_vals.push(this.blocks[i]["tx_sum"]);
     }
