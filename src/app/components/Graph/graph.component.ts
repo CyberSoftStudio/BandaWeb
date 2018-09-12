@@ -62,7 +62,7 @@ export class GraphComponent implements AfterViewInit {
   @ContentChildren(GraphItemDirective) items: QueryList<GraphItemDirective>;
   @ViewChildren(GraphItemElement, { read: ElementRef }) private itemsElements: QueryList<ElementRef>;
   @ViewChild('graph') private graph: ElementRef;
-  @Input() timing = '7000ms cubic-bezier(0.2, 1, 0.2, 1)';
+  @Input() timing = '2000ms cubic-bezier(0.2, 1, 0.2, 1)';
   @Input() showControls = true;
   @Input() slide = false;
   @Input() slideTime = 2;

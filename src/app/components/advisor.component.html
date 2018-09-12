@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="bt-block bt-team">
+  <h1>{{ts.translate('labels.advisor')}}
+    <span></span>
+  </h1>
+  <div class="bt-card-block">
+    <ng-container *ngFor="let person of source">
+      <div class="item">
+        <h4 class="header">{{person.name}}
+        </h4>
+        <div>
+          <img class="image" src="{{person.img}}"/>
+          <p class="content">
+            <span>{{person.specializations}}</span>
+          </p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+

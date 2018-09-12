@@ -4,6 +4,7 @@ export {ProjectsComponent} from './projects.component';
 export {ChartComponent} from './Chart3D/chart.component';
 export {TechniquesComponent} from './techniques.component';
 export {TeamComponent} from './team.component';
+export {AdvisorComponent} from './advisor.component';
 export {ContactComponent} from './contact.component';
 export {JobComponent} from './job.component';
 export {FooterComponent} from './footer.component';

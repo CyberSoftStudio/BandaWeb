@@ -25,7 +25,8 @@ export const EN = {
         EN: 'english',
         DE: 'deutsche',
         CN: '汉字',
-        major_priorities: 'Major Priorities'
+        major_priorities: 'Major Priorities',
+        advisor: 'Advisors'
     },
     errors: {},
     info: {},

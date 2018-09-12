@@ -289,7 +289,9 @@ html body #techniques .bt-techniques .bt-card-block .item img {
   background: radial-gradient(#937bff 5%, transparent);
   width: 100%;
 }
-html body #team .bt-team {
+html body #team .bt-team,
+html body #advisor .bt-team {
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,7 +299,8 @@ html body #team .bt-team {
   width: 100%;
   background-image: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
 }
-html body #team .bt-team h1 {
+html body #team .bt-team h1,
+html body #advisor .bt-team h1 {
   color: #f6ffd7;
   display: block;
   position: relative;
@@ -307,7 +310,8 @@ html body #team .bt-team h1 {
   width: 100px;
   color: rgba(0, 0, 0, 0.8);
 }
-html body #team .bt-team h1 span {
+html body #team .bt-team h1 span,
+html body #advisor .bt-team h1 span {
   display: block;
   position: absolute;
   bottom: -5px;
@@ -316,14 +320,16 @@ html body #team .bt-team h1 span {
   height: 2px;
   width: 100%;
 }
-html body #team .bt-team .bt-card-block {
+html body #team .bt-team .bt-card-block,
+html body #advisor .bt-team .bt-card-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   transform-style: preserve-3d;
   perspective: 1000px;
 }
-html body #team .bt-team .bt-card-block .item {
+html body #team .bt-team .bt-card-block .item,
+html body #advisor .bt-team .bt-card-block .item {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -334,7 +340,8 @@ html body #team .bt-team .bt-card-block .item {
   transform: rotateY(0deg);
   transition: transform 0.5s;
 }
-html body #team .bt-team .bt-card-block .item .header {
+html body #team .bt-team .bt-card-block .item .header,
+html body #advisor .bt-team .bt-card-block .item .header {
   display: block;
   text-align: center;
   margin: 0;
@@ -342,24 +349,39 @@ html body #team .bt-team .bt-card-block .item .header {
   font-weight: 800;
   background: transparent;
 }
-html body #team .bt-team .bt-card-block .item div {
+html body #team .bt-team .bt-card-block .item div,
+html body #advisor .bt-team .bt-card-block .item div {
   display: flex;
   width: 100%;
   height: 150px;
+  justify-items: center;
 }
-html body #team .bt-team .bt-card-block .item div .image {
+html body #team .bt-team .bt-card-block .item div .image,
+html body #advisor .bt-team .bt-card-block .item div .image {
   width: 100px;
 }
-html body #team .bt-team .bt-card-block .item div .content {
+html body #team .bt-team .bt-card-block .item div .content,
+html body #advisor .bt-team .bt-card-block .item div .content {
   margin: 0;
   padding: 5px;
-  font-size: 14px;
   width: 100%;
   background: white;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
-html body #team .bt-team .bt-card-block .item:hover {
+html body #team .bt-team .bt-card-block .item div .content span,
+html body #advisor .bt-team .bt-card-block .item div .content span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #937bff;
+}
+html body #team .bt-team .bt-card-block .item:hover,
+html body #advisor .bt-team .bt-card-block .item:hover {
   transform: rotateY(25deg);
+}
+html body #advisor .bt-team h1 {
+  width: 240px;
 }
 html body #contact {
   margin: 0;
