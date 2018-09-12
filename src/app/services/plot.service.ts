@@ -13,7 +13,12 @@ export class PlotService {
 
 
   public getObservable (currencyCode: string) {
-    let lastSecondsToCheck = 3600;
+    let lastSecondsToCheck;
+    if (currencyCode == "eth" || currencyCode == "ltc") {
+      lastSecondsToCheck = 3600;
+    } else {
+      lastSecondsToCheck = 21600;
+    }
     let dataGetter =  function sequenceSubscriber(observer) {
 
       function startEmmiting() {
