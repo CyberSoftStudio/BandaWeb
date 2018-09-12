@@ -71,6 +71,7 @@ import {PlotService} from './services/plot.service';
     AppComponent,
       MenuComponent,
       StartComponent,
+      GraphComponent,
       ProjectsComponent,
       ChartComponent,
       TechniquesComponent,
