@@ -48,19 +48,19 @@ export const Team = {
         {
           img: '../assets/images/max.jpg',
           name: 'Maxim',
-          specializations: 'Markets analitic'
+          specializations: 'Markets analytic'
         }
     ],
     RU: [
       {
         img: '../assets/images/Igor.jpg',
         name: 'Игорь Иванов',
-        specializations: 'Этот штрих умеет общаться с людми и силён в деловых отношениях.'
+        specializations: 'Этот штрих умеет общаться с людьми и силён в деловых отношениях.'
       },
       {
         img: '../assets/images/AndriyB.jpg',
         name: 'Андрей Бородин',
-        specializations: 'Это мегамозг. Он всё раскладывает Вейвлетами и собирается раскладывать даже жывые организмы.'
+        specializations: 'Это мегамозг. Он всё раскладывает Вейвлетами и собирается раскладывать даже живые организмы.'
       },
       {
         img: '../assets/images/IgorP.jpg',
