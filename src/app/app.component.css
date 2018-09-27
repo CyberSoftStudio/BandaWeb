@@ -896,9 +896,17 @@ html body #goToTop mat-icon {
   .bt-contact .bt-contact-inner {
     width: 90%;
   }
+  .bt-contact .bt-contact-inner .btn-submit {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 860px) {
   .bt-contact .bt-contact-inner {
     width: 50%;
   }
+}
+.image .loading {
+  background: #a2a255;
+  border-style: solid;
+  border-width: 5px;
 }
