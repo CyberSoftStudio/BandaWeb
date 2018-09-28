@@ -353,7 +353,7 @@ html body #advisor .bt-team {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
+  background-image: linear-gradient(to top, transparent, rgba(147, 123, 255, 0.3));
 }
 html body #team .bt-team h1,
 html body #advisor .bt-team h1 {
@@ -623,8 +623,14 @@ html body #goToTop mat-icon {
   html body #techniques .bt-techniques .bt-card-block .item {
     width: 400px;
   }
+  html body .bt-projects {
+    padding-bottom: 10px;
+  }
   html body .bt-projects .project-image {
     width: 80%;
+  }
+  html body .bt-projects ul {
+    padding-bottom: 0px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -713,7 +719,7 @@ html body #goToTop mat-icon {
   align-items: center;
   margin: 0;
   padding: 30px 0 100px 0;
-  background: linear-gradient(to bottom right, transparent, rgba(147, 123, 255, 0.3));
+  background: linear-gradient(to bottom, transparent, rgba(147, 123, 255, 0.3));
 }
 .bt-projects h1 {
   color: #f6ffd7;
@@ -904,9 +910,4 @@ html body #goToTop mat-icon {
   .bt-contact .bt-contact-inner {
     width: 50%;
   }
-}
-.image .loading {
-  background: #a2a255;
-  border-style: solid;
-  border-width: 5px;
 }

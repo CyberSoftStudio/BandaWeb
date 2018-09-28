@@ -1,8 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { PlotService } from '../services/plot.service';
-import * as Plotly from 'plotly.js';
-import { Config, Data, Layout } from '../../../node_modules/plotly.js';
 
 
 @Component({
@@ -84,6 +81,7 @@ export class PlotComponent implements OnInit {
         this.blocks.shift();
       }
       this.updatePlots();
+      
       return;
     }
 

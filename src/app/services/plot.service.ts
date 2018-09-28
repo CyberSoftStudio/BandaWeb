@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
 })
 
 export class PlotService {
-  public apiURL: string = 'http://104.248.29.132:8080/data';
+
+  public apiURL = 'http://104.248.29.132:8080/data';
+
   constructor() {
   }
 
@@ -35,7 +37,7 @@ export class PlotService {
         _getDayBlocks().then(response => {
           let resp = [];
           resp = response['data'];
-          if(resp.length > 0) {
+          if (resp.length > 0) {
             observer.next(resp);
           }
         }).catch(err => console.dir(err));
